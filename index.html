@@ -1,0 +1,185 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8">
+<title>Fiches foot 2026-08-16 (1 j)</title>
+<style>
+ /* Jetons de couleur : la page est consultee dans le theme du telephone.
+    On ne style qu'a travers ces variables, jamais en dur dans une media
+    query, sinon le bascule manuelle du lecteur ne peut plus reprendre la
+    main. Neutres legerement bleutes plutot que gris purs. */
+ :root {
+   --fond:#f6f7f9; --carte:#ffffff; --bord:#e2e5ea; --filet:#f0f1f4;
+   --texte:#14161a; --sourdine:#5a6270; --efface:#9aa1ad;
+   --puce:#eef1f5; --accent:#2e7d32; --tiede:#b8860b; --froid:#b0b6c0;
+   --alerte:#b3261e;
+ }
+ @media (prefers-color-scheme: dark) {
+   :root {
+     --fond:#12151a; --carte:#191d24; --bord:#2a303a; --filet:#232830;
+     --texte:#e6e9ee; --sourdine:#9aa3b2; --efface:#6b7382;
+     --puce:#232935; --accent:#6cbf74; --tiede:#d6a53c; --froid:#4a525f;
+     --alerte:#f0776b;
+   }
+ }
+ :root[data-theme="dark"] {
+   --fond:#12151a; --carte:#191d24; --bord:#2a303a; --filet:#232830;
+   --texte:#e6e9ee; --sourdine:#9aa3b2; --efface:#6b7382;
+   --puce:#232935; --accent:#6cbf74; --tiede:#d6a53c; --froid:#4a525f;
+   --alerte:#f0776b;
+ }
+ :root[data-theme="light"] {
+   --fond:#f6f7f9; --carte:#ffffff; --bord:#e2e5ea; --filet:#f0f1f4;
+   --texte:#14161a; --sourdine:#5a6270; --efface:#9aa1ad;
+   --puce:#eef1f5; --accent:#2e7d32; --tiede:#b8860b; --froid:#b0b6c0;
+   --alerte:#b3261e;
+ }
+ body { font: 14px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        margin: 1.5rem; color: var(--texte); background: var(--fond); }
+ h1 { font-size: 1.15rem; margin-bottom: .2rem; text-wrap: balance; }
+ .avert { color:var(--sourdine); max-width: 72ch; font-size:.86rem; }
+ .fiche { background:var(--carte); border:1px solid var(--bord);
+           border-radius:10px; padding:1rem 1.1rem; margin:1rem 0; }
+ .fiche.riche { border-left:4px solid var(--accent); }
+ .fiche.correcte { border-left:4px solid var(--tiede); }
+ .fiche.maigre { border-left:4px solid var(--froid); opacity:.85; }
+ .matiere { font-size:.72rem; font-weight:600; color:var(--sourdine);
+             background:var(--puce); border-radius:99px; padding:.1rem .5rem;
+             margin-left:.5rem; vertical-align:middle; white-space:nowrap; }
+ .titre { font-size:1.05rem; font-weight:650; text-wrap:balance; }
+ .titre em { color:var(--efface); font-style:normal; font-weight:400; }
+ .meta { color:var(--sourdine); font-size:.82rem; }
+ .chiffres { display:flex; flex-wrap:wrap; gap:1.4rem; margin:.8rem 0;
+              padding:.6rem 0; border-top:1px solid var(--filet);
+              border-bottom:1px solid var(--filet); }
+ .chiffres .k { display:block; color:var(--sourdine); font-size:.74rem;
+                 text-transform:uppercase; letter-spacing:.04em; }
+ .chiffres .v { font-size:1.02rem; font-weight:600;
+                 font-variant-numeric:tabular-nums; }
+ .ecart { font-weight:700; }
+ .sansligne { color:var(--efface); font-weight:400; }
+ .colonnes { display:flex; gap:1.6rem; flex-wrap:wrap; }
+ table { border-collapse:collapse; min-width:340px; flex:1; }
+ th, td { padding:.28rem .5rem; border-bottom:1px solid var(--filet);
+           text-align:left; }
+ th { font-size:.78rem; color:var(--sourdine); text-transform:uppercase;
+       letter-spacing:.03em; }
+ td.num { text-align:right; font-variant-numeric:tabular-nums; }
+ tr.faible td { color:var(--efface); }
+ tr.sep td { padding:.15rem; border-bottom:2px solid var(--bord); }
+ .h2h { flex:1; min-width:260px; display:flex; gap:1.2rem; flex-wrap:wrap; }
+ .recents { flex:1; min-width:230px; }
+ .recents li { white-space:nowrap; }
+ .h2h h4 { margin:.2rem 0 .3rem; font-size:.78rem; color:var(--sourdine);
+            text-transform:uppercase; letter-spacing:.03em; }
+ .h2h ul { margin:0; padding-left:1.1rem; font-variant-numeric:tabular-nums; }
+ .note { color:var(--sourdine); font-size:.82rem; }
+ /* Telephone : la fiche doit rester lisible a une main, sans zoom ni
+    defilement horizontal. Les deux colonnes s'empilent, le bandeau de
+    chiffres passe en grille a deux colonnes. */
+ @media (max-width: 640px) {
+   body { margin: .6rem; }
+   .fiche { padding:.8rem .7rem; }
+   .chiffres { display:grid; grid-template-columns:1fr 1fr; gap:.7rem 1rem; }
+   .colonnes { flex-direction:column; gap:.9rem; }
+   table { min-width:0; width:100%; }
+   th, td { padding:.3rem .25rem; font-size:.9rem; }
+   .h2h ul { font-size:.86rem; }
+   .titre { font-size:1rem; }
+ }
+</style></head><body>
+<h1>Matchs les plus analysables &mdash; 2026-08-16 (1 j)</h1>
+<p class="avert"><b>Ordonnees par matiere disponible, pas par valeur detectee.</b>
+En haut : les rencontres sur lesquelles il y a de quoi se faire un avis -
+echantillon profond des deux cotes et statistiques completes. Un match ou le
+modele s'ecarte fortement du book mais dont on ne sait rien reste en bas : il
+n'y a rien a y analyser.</p>
+<p class="avert">Le nombre entre parentheses est l'effectif derriere le chiffre.
+Une moyenne sur 5 matchs et une sur 10 occupent la meme place a l'ecran sans
+avoir le meme poids ; les lignes grisees reposent sur moins de 10 matchs.
+Le total du modele et l'ecart au book sont donnes comme reperes, pas comme
+recommandation - le backtest a montre que ces ecarts ne sont pas exploitables
+tels quels. C'est ton analyse qui decide.</p>
+
+<article class="fiche riche">
+  <header>
+    <div class="titre">Dresden <em>vs</em> Darmstadt
+      <span class="matiere">matiere riche
+        (100%)</span></div>
+    <div class="meta">2026-08-16 &middot; D2</div>
+  </header>
+  <div class="chiffres">
+    <div><span class="k">Total modele</span><span class="v">3.14</span></div>
+    <div><span class="k">P(+2,5)</span><span class="v">60.7%</span></div>
+    <div><span class="k">Ligne book</span><span class="v">1.60 / 2.30 &nbsp;&middot;&nbsp; book 59.5%</span></div>
+    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>+1.2% over</span></span></div>
+    <div><span class="k">1 / N / 2</span><span class="v">
+      46% / 24% / 30%</span></div>
+  </div>
+  <div class="colonnes">
+    <table>
+      <thead><tr><th>Moyenne sur 10 matchs</th><th>Dresden</th>
+        <th>Darmstadt</th></tr></thead>
+      <tbody>
+        <tr><td>Buts marques</td><td class='num'>1.90 (10)</td><td class='num'>1.20 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>1.20 (10)</td><td class='num'>1.70 (10)</td></tr><tr><td>Tirs</td><td class='num'>13.30 (10)</td><td class='num'>14.20 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>5.00 (10)</td><td class='num'>4.00 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>3.60 (10)</td><td class='num'>5.40 (10)</td></tr><tr><td>Corners</td><td class='num'>5.40 (10)</td><td class='num'>4.20 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>60% (10)</td><td class='num'>40% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>50% (10)</td><td class='num'>70% (10)</td></tr><tr><td>Total du match</td><td class='num'>3.10 (10)</td><td class='num'>2.90 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.38 (10)</td><td class='num'>0.30 (10)</td></tr>
+        <tr><td>Forme (5 derniers)</td><td class='num'>VDVDV</td>
+          <td class='num'>DNDND</td></tr>
+      </tbody>
+    </table>
+    <div class="h2h"><div class='recents'><h4>Dresden &mdash; 6 derniers</h4><ul><li>17/05 dom. Holstein Kiel 2-1 [3]</li><li>09/05 ext. Braunschweig 1-2 [3]</li><li>02/05 dom. Kaiserslautern 1-0 [1]</li><li>24/04 ext. Fortuna Dusseldorf 1-3 [4]</li><li>18/04 dom. Bochum 2-0 [2]</li><li>11/04 ext. Nurnberg 2-0 [2]</li></ul><p class='note'>Buts par match : <b>2.50 (6)</b></p></div><div class='recents'><h4>Darmstadt &mdash; 6 derniers</h4><ul><li>17/05 dom. Paderborn 0-2 [2]</li><li>10/05 ext. PreuÃen MÃ¼nster 1-1 [2]</li><li>03/05 ext. Karlsruhe 1-2 [3]</li><li>25/04 dom. Elversberg 3-3 [6]</li><li>19/04 ext. Greuther Furth 2-3 [5]</li><li>11/04 dom. Hannover 0-2 [2]</li></ul><p class='note'>Buts par match : <b>3.33 (6)</b></p></div></div>
+  </div>
+</article>
+<article class="fiche riche">
+  <header>
+    <div class="titre">Hannover <em>vs</em> Wolfsburg
+      <span class="matiere">matiere riche
+        (100%)</span></div>
+    <div class="meta">2026-08-16 &middot; D2</div>
+  </header>
+  <div class="chiffres">
+    <div><span class="k">Total modele</span><span class="v">2.97</span></div>
+    <div><span class="k">P(+2,5)</span><span class="v">57.0%</span></div>
+    <div><span class="k">Ligne book</span><span class="v">1.62 / 2.25 &nbsp;&middot;&nbsp; book 58.6%</span></div>
+    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>-1.6% under</span></span></div>
+    <div><span class="k">1 / N / 2</span><span class="v">
+      53% / 24% / 23%</span></div>
+  </div>
+  <div class="colonnes">
+    <table>
+      <thead><tr><th>Moyenne sur 10 matchs</th><th>Hannover</th>
+        <th>Wolfsburg</th></tr></thead>
+      <tbody>
+        <tr><td>Buts marques</td><td class='num'>1.80 (10)</td><td class='num'>1.20 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>1.40 (10)</td><td class='num'>1.60 (10)</td></tr><tr><td>Tirs</td><td class='num'>13.30 (10)</td><td class='num'>12.80 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>5.50 (10)</td><td class='num'>4.90 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>4.60 (10)</td><td class='num'>5.40 (10)</td></tr><tr><td>Corners</td><td class='num'>7.40 (10)</td><td class='num'>6.20 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>50% (10)</td><td class='num'>50% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>80% (10)</td><td class='num'>70% (10)</td></tr><tr><td>Total du match</td><td class='num'>3.20 (10)</td><td class='num'>2.80 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.33 (10)</td><td class='num'>0.24 (10)</td></tr>
+        <tr><td>Forme (5 derniers)</td><td class='num'>NVNNN</td>
+          <td class='num'>VNNDV</td></tr>
+      </tbody>
+    </table>
+    <div class="h2h"><div class='recents'><h4>Hannover &mdash; 6 derniers</h4><ul><li>17/05 dom. Nurnberg 3-3 [6]</li><li>09/05 ext. Bochum 1-1 [2]</li><li>03/05 dom. PreuÃen MÃ¼nster 3-3 [6]</li><li>25/04 ext. Karlsruhe 3-1 [4]</li><li>18/04 dom. Paderborn 1-1 [2]</li><li>11/04 ext. Darmstadt 2-0 [2]</li></ul><p class='note'>Buts par match : <b>3.67 (6)</b></p></div><div class='recents'><h4>Wolfsburg &mdash; 6 derniers</h4><ul><li>16/05 ext. St Pauli 3-1 [4]</li><li>09/05 dom. Bayern Munich 0-1 [1]</li><li>03/05 ext. Freiburg 1-1 [2]</li><li>25/04 dom. M&#x27;gladbach 0-0 [0]</li><li>18/04 ext. Union Berlin 2-1 [3]</li><li>11/04 dom. Ein Frankfurt 1-2 [3]</li></ul><p class='note'>Buts par match : <b>2.17 (6)</b></p></div></div>
+  </div>
+</article>
+<article class="fiche riche">
+  <header>
+    <div class="titre">Espanol <em>vs</em> Levante
+      <span class="matiere">matiere riche
+        (100%)</span></div>
+    <div class="meta">2026-08-16 &middot; SP1</div>
+  </header>
+  <div class="chiffres">
+    <div><span class="k">Total modele</span><span class="v">2.61</span></div>
+    <div><span class="k">P(+2,5)</span><span class="v">48.4%</span></div>
+    <div><span class="k">Ligne book</span><span class="v">2.20 / 1.67 &nbsp;&middot;&nbsp; book 42.8%</span></div>
+    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>+5.6% over</span></span></div>
+    <div><span class="k">1 / N / 2</span><span class="v">
+      41% / 27% / 32%</span></div>
+  </div>
+  <div class="colonnes">
+    <table>
+      <thead><tr><th>Moyenne sur 10 matchs</th><th>Espanol</th>
+        <th>Levante</th></tr></thead>
+      <tbody>
+        <tr><td>Buts marques</td><td class='num'>0.80 (10)</td><td class='num'>1.70 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>1.30 (10)</td><td class='num'>1.50 (10)</td></tr><tr><td>Tirs</td><td class='num'>12.00 (10)</td><td class='num'>15.70 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>3.90 (10)</td><td class='num'>5.40 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>5.80 (10)</td><td class='num'>3.90 (10)</td></tr><tr><td>Corners</td><td class='num'>5.30 (10)</td><td class='num'>5.70 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>40% (10)</td><td class='num'>50% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>50% (10)</td><td class='num'>50% (10)</td></tr><tr><td>Total du match</td><td class='num'>2.10 (10)</td><td class='num'>3.20 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.21 (10)</td><td class='num'>0.31 (10)</td></tr>
+        <tr><td>Forme (5 derniers)</td><td class='num'>DDVVN</td>
+          <td class='num'>DVVVD</td></tr>
+      </tbody>
+    </table>
+    <div class="h2h"><div class='recents'><h4>Espanol &mdash; 6 derniers</h4><ul><li>23/05 dom. Sociedad 1-1 [2]</li><li>17/05 ext. Osasuna 2-1 [3]</li><li>13/05 dom. Ath Bilbao 2-0 [2]</li><li>09/05 ext. Sevilla 1-2 [3]</li><li>03/05 dom. Real Madrid 0-2 [2]</li><li>27/04 dom. Levante 0-0 [0]</li></ul><p class='note'>Buts par match : <b>2.00 (6)</b></p></div><div class='recents'><h4>Levante &mdash; 6 derniers</h4><ul><li>23/05 ext. Betis 1-2 [3]</li><li>17/05 dom. Mallorca 2-0 [2]</li><li>12/05 ext. Celta 3-2 [5]</li><li>08/05 dom. Osasuna 3-2 [5]</li><li>02/05 ext. Villarreal 1-5 [6]</li><li>27/04 ext. Espanol 0-0 [0]</li></ul><p class='note'>Buts par match : <b>3.50 (6)</b></p></div></div>
+  </div>
+</article>
+</body></html>

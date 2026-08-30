@@ -54,6 +54,8 @@
  .chiffres .v { font-size:1.02rem; font-weight:600;
                  font-variant-numeric:tabular-nums; }
  .ecart { font-weight:700; }
+ .ecart.fort { color:var(--alerte); }
+ .v.ref { font-size:.8rem; font-weight:500; color:var(--sourdine); }
  .sansligne { color:var(--efface); font-weight:400; }
  .colonnes { display:flex; gap:1.6rem; flex-wrap:wrap; }
  table { border-collapse:collapse; min-width:340px; flex:1; }
@@ -85,12 +87,17 @@
    .titre { font-size:1rem; }
  }
 </style></head><body>
-<h1>Matchs les plus analysables &mdash; 2026-08-30 (1 j)</h1>
-<p class="avert"><b>Ordonnees par matiere disponible, pas par valeur detectee.</b>
-En haut : les rencontres sur lesquelles il y a de quoi se faire un avis -
-echantillon profond des deux cotes et statistiques completes. Un match ou le
-modele s'ecarte fortement du book mais dont on ne sait rien reste en bas : il
-n'y a rien a y analyser.</p>
+<h1>Matchs par ecart au marche &mdash; 2026-08-30 (1 j)</h1>
+<p class="avert"><b>Ordonnees par amplitude de l'ecart, du plus fort au plus
+faible.</b> L'ecart se mesure contre la source la moins chargee en marge -
+Betfair Exchange quand il est disponible, marge mediane 2,6% contre 5,6% pour
+Bet365 et 7,5% pour la moyenne du marche. Une source dont la marge derape, ou
+qui contredit les autres, est <b>refusee</b> : ces rencontres ferment la marche
+sans ecart plutot que d'en afficher un fantaisiste. La colonne Reference dit
+toujours d'ou vient le chiffre.</p>
+<p class="avert">L'esperance est calculee au <b>meilleur prix affiche</b> du
+marche, pas a celui de la reference : l'ecart en probabilite ne dit pas ce qu'on
+encaisse, c'est la cote obtenue qui le dit.</p>
 <p class="avert">Le nombre entre parentheses est l'effectif derriere le chiffre.
 Une moyenne sur 5 matchs et une sur 10 occupent la meme place a l'ecran sans
 avoir le meme poids ; les lignes grisees reposent sur moins de 10 matchs.
@@ -98,62 +105,6 @@ Le total du modele et l'ecart au book sont donnes comme reperes, pas comme
 recommandation - le backtest a montre que ces ecarts ne sont pas exploitables
 tels quels. C'est ton analyse qui decide.</p>
 
-<article class="fiche riche">
-  <header>
-    <div class="titre">Darmstadt <em>vs</em> Hannover
-      <span class="matiere">matiere riche
-        (100%)</span></div>
-    <div class="meta">2026-08-30 &middot; D2</div>
-  </header>
-  <div class="chiffres">
-    <div><span class="k">Total modele</span><span class="v">2.91</span></div>
-    <div><span class="k">P(+2,5)</span><span class="v">55.5%</span></div>
-    <div><span class="k">Ligne book</span><span class="v">1.53 / 2.40 &nbsp;&middot;&nbsp; book 61.8%</span></div>
-    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>-6.3% under</span></span></div>
-    <div><span class="k">1 / N / 2</span><span class="v">
-      40% / 25% / 34%</span></div>
-  </div>
-  <div class="colonnes">
-    <table>
-      <thead><tr><th>Moyenne sur 10 matchs</th><th>Darmstadt</th>
-        <th>Hannover</th></tr></thead>
-      <tbody>
-        <tr><td>Buts marques</td><td class='num'>1.10 (10)</td><td class='num'>1.60 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>1.90 (10)</td><td class='num'>1.40 (10)</td></tr><tr><td>Tirs</td><td class='num'>14.10 (10)</td><td class='num'>14.00 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>3.80 (10)</td><td class='num'>5.20 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>6.10 (10)</td><td class='num'>4.60 (10)</td></tr><tr><td>Corners</td><td class='num'>5.30 (10)</td><td class='num'>6.90 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>50% (10)</td><td class='num'>40% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>70% (10)</td><td class='num'>70% (10)</td></tr><tr><td>Total du match</td><td class='num'>3.00 (10)</td><td class='num'>3.00 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.29 (10)</td><td class='num'>0.31 (10)</td></tr>
-        <tr><td>Forme (5 derniers)</td><td class='num'>DNDND</td>
-          <td class='num'>NNNDD</td></tr>
-      </tbody>
-    </table>
-    <div class="h2h"><div class='recents'><h4>Darmstadt &mdash; 6 derniers</h4><ul><li>16/08 ext. Dresden 0-1 [1]</li><li>08/08 dom. Holstein Kiel 2-2 [4]</li><li>17/05 dom. Paderborn 0-2 [2]</li><li>10/05 ext. PreuÃen MÃ¼nster 1-1 [2]</li><li>03/05 ext. Karlsruhe 1-2 [3]</li><li>25/04 dom. Elversberg 3-3 [6]</li></ul><p class='note'>Buts par match : <b>3.00 (6)</b></p></div><div class='recents'><h4>Hannover &mdash; 6 derniers</h4><ul><li>16/08 dom. Wolfsburg 0-1 [1]</li><li>09/08 ext. Cottbus 1-3 [4]</li><li>17/05 dom. Nurnberg 3-3 [6]</li><li>09/05 ext. Bochum 1-1 [2]</li><li>03/05 dom. PreuÃen MÃ¼nster 3-3 [6]</li><li>25/04 ext. Karlsruhe 3-1 [4]</li></ul><p class='note'>Buts par match : <b>3.83 (6)</b></p></div></div>
-  </div>
-</article>
-<article class="fiche riche">
-  <header>
-    <div class="titre">Magdeburg <em>vs</em> Holstein Kiel
-      <span class="matiere">matiere riche
-        (100%)</span></div>
-    <div class="meta">2026-08-30 &middot; D2</div>
-  </header>
-  <div class="chiffres">
-    <div><span class="k">Total modele</span><span class="v">3.44</span></div>
-    <div><span class="k">P(+2,5)</span><span class="v">66.8%</span></div>
-    <div><span class="k">Ligne book</span><span class="v">1.57 / 2.35 &nbsp;&middot;&nbsp; book 60.6%</span></div>
-    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>+6.2% over</span></span></div>
-    <div><span class="k">1 / N / 2</span><span class="v">
-      46% / 23% / 31%</span></div>
-  </div>
-  <div class="colonnes">
-    <table>
-      <thead><tr><th>Moyenne sur 10 matchs</th><th>Magdeburg</th>
-        <th>Holstein Kiel</th></tr></thead>
-      <tbody>
-        <tr><td>Buts marques</td><td class='num'>2.00 (10)</td><td class='num'>1.70 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>1.50 (10)</td><td class='num'>1.20 (10)</td></tr><tr><td>Tirs</td><td class='num'>11.60 (10)</td><td class='num'>11.90 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>4.80 (10)</td><td class='num'>3.70 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>5.10 (10)</td><td class='num'>4.20 (10)</td></tr><tr><td>Corners</td><td class='num'>5.10 (10)</td><td class='num'>5.70 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>60% (10)</td><td class='num'>70% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>50% (10)</td><td class='num'>60% (10)</td></tr><tr><td>Total du match</td><td class='num'>3.50 (10)</td><td class='num'>2.90 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.42 (10)</td><td class='num'>0.46 (10)</td></tr>
-        <tr><td>Forme (5 derniers)</td><td class='num'>VVDDV</td>
-          <td class='num'>VDDNN</td></tr>
-      </tbody>
-    </table>
-    <div class="h2h"><div class='recents'><h4>Magdeburg &mdash; 6 derniers</h4><ul><li>15/08 ext. Osnabruck 3-0 [3]</li><li>08/08 dom. Braunschweig 1-6 [7]</li><li>17/05 dom. Kaiserslautern 0-1 [1]</li><li>09/05 ext. Holstein Kiel 3-1 [4]</li><li>03/05 dom. Hertha 1-0 [1]</li><li>26/04 ext. Nurnberg 0-1 [1]</li></ul><p class='note'>Buts par match : <b>2.83 (6)</b></p></div><div class='recents'><h4>Holstein Kiel &mdash; 6 derniers</h4><ul><li>14/08 dom. St Pauli 2-2 [4]</li><li>08/08 ext. Darmstadt 2-2 [4]</li><li>17/05 ext. Dresden 1-2 [3]</li><li>09/05 dom. Magdeburg 1-3 [4]</li><li>02/05 dom. Braunschweig 2-0 [2]</li><li>25/04 ext. Hertha 1-0 [1]</li></ul><p class='note'>Buts par match : <b>3.00 (6)</b></p></div></div>
-  </div>
-</article>
 <article class="fiche riche">
   <header>
     <div class="titre">St Pauli <em>vs</em> Kaiserslautern
@@ -164,8 +115,10 @@ tels quels. C'est ton analyse qui decide.</p>
   <div class="chiffres">
     <div><span class="k">Total modele</span><span class="v">2.23</span></div>
     <div><span class="k">P(+2,5)</span><span class="v">38.6%</span></div>
-    <div><span class="k">Ligne book</span><span class="v">1.65 / 2.20 &nbsp;&middot;&nbsp; book 57.6%</span></div>
-    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>-19.0% under</span></span></div>
+    <div><span class="k">Ligne book</span><span class="v">1.65 / 2.20 &nbsp;&middot;&nbsp; book 57.8%</span></div>
+    <div><span class="k">Ecart</span><span class="v"><span class='ecart fort'>-19.2% under</span></span></div>
+    <div><span class="k">Esperance au meilleur prix</span><span class="v"><span class='ecart fort'>+38.1%</span></span></div>
+    <div><span class="k">Reference</span><span class="v ref">betfair &middot; marge 4.9%</span></div>
     <div><span class="k">1 / N / 2</span><span class="v">
       33% / 30% / 38%</span></div>
   </div>
@@ -184,6 +137,216 @@ tels quels. C'est ton analyse qui decide.</p>
 </article>
 <article class="fiche riche">
   <header>
+    <div class="titre">Real Madrid <em>vs</em> Malaga
+      <span class="matiere">matiere riche
+        (100%)</span></div>
+    <div class="meta">2026-08-30 &middot; SP1</div>
+  </header>
+  <div class="chiffres">
+    <div><span class="k">Total modele</span><span class="v">2.96</span></div>
+    <div><span class="k">P(+2,5)</span><span class="v">56.8%</span></div>
+    <div><span class="k">Ligne book</span><span class="v">1.33 / 3.40 &nbsp;&middot;&nbsp; book 72.7%</span></div>
+    <div><span class="k">Ecart</span><span class="v"><span class='ecart fort'>-15.8% under</span></span></div>
+    <div><span class="k">Esperance au meilleur prix</span><span class="v"><span class='ecart fort'>+46.7%</span></span></div>
+    <div><span class="k">Reference</span><span class="v ref">betfair &middot; marge 1.7%</span></div>
+    <div><span class="k">1 / N / 2</span><span class="v">
+      71% / 18% / 11%</span></div>
+  </div>
+  <div class="colonnes">
+    <table>
+      <thead><tr><th>Moyenne sur 10 matchs</th><th>Real Madrid</th>
+        <th>Malaga</th></tr></thead>
+      <tbody>
+        <tr><td>Buts marques</td><td class='num'>1.90 (10)</td><td class='num'>0.80 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>0.90 (10)</td><td class='num'>1.90 (10)</td></tr><tr><td>Tirs</td><td class='num'>16.60 (10)</td><td class='num'>9.60 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>6.60 (10)</td><td class='num'>2.70 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>3.60 (10)</td><td class='num'>4.60 (10)</td></tr><tr><td>Corners</td><td class='num'>6.10 (10)</td><td class='num'>4.10 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>40% (10)</td><td class='num'>50% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>60% (10)</td><td class='num'>50% (10)</td></tr><tr><td>Total du match</td><td class='num'>2.80 (10)</td><td class='num'>2.70 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.29 (10)</td><td class='num'>0.30 (10)</td></tr>
+        <tr><td>Forme (5 derniers)</td><td class='num'>VVVVV</td>
+          <td class='num'>DDDDN</td></tr>
+      </tbody>
+    </table>
+    <div class="h2h"><div class='recents'><h4>Real Madrid &mdash; 6 derniers</h4><ul><li>26/08 dom. Sociedad 4-1 [5]</li><li>22/08 ext. Espanol 2-1 [3]</li><li>23/05 dom. Ath Bilbao 4-2 [6]</li><li>17/05 ext. Sevilla 1-0 [1]</li><li>14/05 dom. Oviedo 2-0 [2]</li><li>10/05 ext. Barcelona 0-2 [2]</li></ul><p class='note'>Buts par match : <b>3.17 (6)</b></p></div><div class='recents'><h4>Malaga &mdash; 6 derniers</h4><ul><li>24/08 dom. La Coruna 1-1 [2]</li><li>19/08 ext. Ath Madrid 0-2 [2]</li><li>19/05 dom. Getafe 0-1 [1]</li><li>13/05 ext. Espanol 1-4 [5]</li><li>06/05 dom. Alaves 0-3 [3]</li><li>30/04 ext. Betis 1-2 [3]</li></ul><p class='note'>Buts par match : <b>2.67 (6)</b></p></div></div>
+  </div>
+</article>
+<article class="fiche riche">
+  <header>
+    <div class="titre">Cagliari <em>vs</em> Inter
+      <span class="matiere">matiere riche
+        (100%)</span></div>
+    <div class="meta">2026-08-30 &middot; I1</div>
+  </header>
+  <div class="chiffres">
+    <div><span class="k">Total modele</span><span class="v">3.11</span></div>
+    <div><span class="k">P(+2,5)</span><span class="v">60.2%</span></div>
+    <div><span class="k">Ligne book</span><span class="v">1.93 / 1.93 &nbsp;&middot;&nbsp; book 49.9%</span></div>
+    <div><span class="k">Ecart</span><span class="v"><span class='ecart fort'>+10.3% over</span></span></div>
+    <div><span class="k">Esperance au meilleur prix</span><span class="v"><span class='ecart fort'>+16.1%</span></span></div>
+    <div><span class="k">Reference</span><span class="v ref">betfair &middot; marge 1.8%</span></div>
+    <div><span class="k">1 / N / 2</span><span class="v">
+      16% / 21% / 63%</span></div>
+  </div>
+  <div class="colonnes">
+    <table>
+      <thead><tr><th>Moyenne sur 10 matchs</th><th>Cagliari</th>
+        <th>Inter</th></tr></thead>
+      <tbody>
+        <tr><td>Buts marques</td><td class='num'>1.00 (10)</td><td class='num'>2.80 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>1.20 (10)</td><td class='num'>1.30 (10)</td></tr><tr><td>Tirs</td><td class='num'>13.60 (10)</td><td class='num'>13.50 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>3.90 (10)</td><td class='num'>5.40 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>3.80 (10)</td><td class='num'>3.60 (10)</td></tr><tr><td>Corners</td><td class='num'>4.50 (10)</td><td class='num'>4.80 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>50% (10)</td><td class='num'>70% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>40% (10)</td><td class='num'>70% (10)</td></tr><tr><td>Total du match</td><td class='num'>2.20 (10)</td><td class='num'>4.10 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.26 (10)</td><td class='num'>0.52 (10)</td></tr>
+        <tr><td>Forme (5 derniers)</td><td class='num'>NDVVV</td>
+          <td class='num'>VVNNV</td></tr>
+      </tbody>
+    </table>
+    <div class="h2h"><div class='recents'><h4>Cagliari &mdash; 6 derniers</h4><ul><li>22/08 ext. Parma 1-0 [1]</li><li>24/05 ext. Milan 2-1 [3]</li><li>17/05 dom. Torino 2-1 [3]</li><li>09/05 dom. Udinese 0-2 [2]</li><li>03/05 ext. Bologna 0-0 [0]</li><li>27/04 dom. Atalanta 3-2 [5]</li></ul><p class='note'>Buts par match : <b>2.33 (6)</b></p></div><div class='recents'><h4>Inter &mdash; 6 derniers</h4><ul><li>22/08 dom. Monza 4-1 [5]</li><li>23/05 ext. Bologna 3-3 [6]</li><li>17/05 dom. Verona 1-1 [2]</li><li>09/05 ext. Lazio 3-0 [3]</li><li>03/05 dom. Parma 2-0 [2]</li><li>26/04 ext. Torino 2-2 [4]</li></ul><p class='note'>Buts par match : <b>3.67 (6)</b></p></div></div>
+  </div>
+</article>
+<article class="fiche riche">
+  <header>
+    <div class="titre">Augsburg <em>vs</em> Schalke 04
+      <span class="matiere">matiere riche
+        (100%)</span></div>
+    <div class="meta">2026-08-30 &middot; D1</div>
+  </header>
+  <div class="chiffres">
+    <div><span class="k">Total modele</span><span class="v">2.65</span></div>
+    <div><span class="k">P(+2,5)</span><span class="v">49.3%</span></div>
+    <div><span class="k">Ligne book</span><span class="v">1.73 / 2.10 &nbsp;&middot;&nbsp; book 56.8%</span></div>
+    <div><span class="k">Ecart</span><span class="v"><span class='ecart fort'>-7.5% under</span></span></div>
+    <div><span class="k">Esperance au meilleur prix</span><span class="v"><span class='ecart fort'>+11.5%</span></span></div>
+    <div><span class="k">Reference</span><span class="v ref">betfair &middot; marge 1.3%</span></div>
+    <div><span class="k">1 / N / 2</span><span class="v">
+      36% / 27% / 37%</span></div>
+  </div>
+  <div class="colonnes">
+    <table>
+      <thead><tr><th>Moyenne sur 10 matchs</th><th>Augsburg</th>
+        <th>Schalke 04</th></tr></thead>
+      <tbody>
+        <tr><td>Buts marques</td><td class='num'>1.50 (10)</td><td class='num'>1.60 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>2.00 (10)</td><td class='num'>1.00 (10)</td></tr><tr><td>Tirs</td><td class='num'>13.90 (10)</td><td class='num'>16.10 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>5.20 (10)</td><td class='num'>5.50 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>6.30 (10)</td><td class='num'>3.30 (10)</td></tr><tr><td>Corners</td><td class='num'>4.40 (10)</td><td class='num'>4.30 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>70% (10)</td><td class='num'>50% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>80% (10)</td><td class='num'>50% (10)</td></tr><tr><td>Total du match</td><td class='num'>3.50 (10)</td><td class='num'>2.60 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.29 (10)</td><td class='num'>0.29 (10)</td></tr>
+        <tr><td>Forme (5 derniers)</td><td class='num'>VNVVD</td>
+          <td class='num'>VVVDV</td></tr>
+      </tbody>
+    </table>
+    <div class="h2h"><div class='recents'><h4>Augsburg &mdash; 6 derniers</h4><ul><li>16/05 ext. Union Berlin 0-4 [4]</li><li>09/05 dom. M&#x27;gladbach 3-1 [4]</li><li>02/05 ext. Werder Bremen 3-1 [4]</li><li>25/04 dom. Ein Frankfurt 1-1 [2]</li><li>18/04 ext. Leverkusen 2-1 [3]</li><li>10/04 dom. Hoffenheim 2-2 [4]</li></ul><p class='note'>Buts par match : <b>3.50 (6)</b></p></div><div class='recents'><h4>Schalke 04 &mdash; 6 derniers</h4><ul><li>17/05 dom. Braunschweig 1-0 [1]</li><li>09/05 ext. Nurnberg 0-3 [3]</li><li>02/05 dom. Fortuna Dusseldorf 1-0 [1]</li><li>26/04 ext. Paderborn 3-2 [5]</li><li>19/04 dom. PreuÃen MÃ¼nster 4-1 [5]</li><li>12/04 ext. Elversberg 2-1 [3]</li></ul><p class='note'>Buts par match : <b>3.00 (6)</b></p></div></div>
+  </div>
+</article>
+<article class="fiche riche">
+  <header>
+    <div class="titre">Monaco <em>vs</em> Marseille
+      <span class="matiere">matiere riche
+        (100%)</span></div>
+    <div class="meta">2026-08-30 &middot; F1</div>
+  </header>
+  <div class="chiffres">
+    <div><span class="k">Total modele</span><span class="v">3.49</span></div>
+    <div><span class="k">P(+2,5)</span><span class="v">67.7%</span></div>
+    <div><span class="k">Ligne book</span><span class="v">1.57 / 2.38 &nbsp;&middot;&nbsp; book 60.8%</span></div>
+    <div><span class="k">Ecart</span><span class="v"><span class='ecart fort'>+6.8% over</span></span></div>
+    <div><span class="k">Esperance au meilleur prix</span><span class="v"><span class='ecart fort'>+6.9%</span></span></div>
+    <div><span class="k">Reference</span><span class="v ref">bet365 &middot; marge 5.7%</span></div>
+    <div><span class="k">1 / N / 2</span><span class="v">
+      42% / 23% / 36%</span></div>
+  </div>
+  <div class="colonnes">
+    <table>
+      <thead><tr><th>Moyenne sur 10 matchs</th><th>Monaco</th>
+        <th>Marseille</th></tr></thead>
+      <tbody>
+        <tr><td>Buts marques</td><td class='num'>1.80 (10)</td><td class='num'>1.50 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>1.70 (10)</td><td class='num'>1.20 (10)</td></tr><tr><td>Tirs</td><td class='num'>13.80 (10)</td><td class='num'>17.20 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>5.10 (10)</td><td class='num'>6.20 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>4.60 (10)</td><td class='num'>3.40 (10)</td></tr><tr><td>Corners</td><td class='num'>5.70 (10)</td><td class='num'>5.90 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>70% (10)</td><td class='num'>60% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>70% (10)</td><td class='num'>50% (10)</td></tr><tr><td>Total du match</td><td class='num'>3.50 (10)</td><td class='num'>2.70 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.35 (10)</td><td class='num'>0.24 (10)</td></tr>
+        <tr><td>Forme (5 derniers)</td><td class='num'>NVDDV</td>
+          <td class='num'>NDVVV</td></tr>
+      </tbody>
+    </table>
+    <div class="h2h"><div class='recents'><h4>Monaco &mdash; 6 derniers</h4><ul><li>23/08 ext. Le Havre 1-0 [1]</li><li>17/05 ext. Strasbourg 4-5 [9]</li><li>10/05 dom. Lille 0-1 [1]</li><li>02/05 ext. Metz 2-1 [3]</li><li>25/04 ext. Toulouse 2-2 [4]</li><li>19/04 dom. Auxerre 2-2 [4]</li></ul><p class='note'>Buts par match : <b>3.67 (6)</b></p></div><div class='recents'><h4>Marseille &mdash; 6 derniers</h4><ul><li>21/08 dom. Strasbourg 4-0 [4]</li><li>17/05 dom. Rennes 3-1 [4]</li><li>10/05 ext. Le Havre 1-0 [1]</li><li>02/05 ext. Nantes 0-3 [3]</li><li>26/04 dom. Nice 1-1 [2]</li><li>18/04 ext. Lorient 0-2 [2]</li></ul><p class='note'>Buts par match : <b>2.67 (6)</b></p></div></div>
+  </div>
+</article>
+<article class="fiche riche">
+  <header>
+    <div class="titre">Magdeburg <em>vs</em> Holstein Kiel
+      <span class="matiere">matiere riche
+        (100%)</span></div>
+    <div class="meta">2026-08-30 &middot; D2</div>
+  </header>
+  <div class="chiffres">
+    <div><span class="k">Total modele</span><span class="v">3.44</span></div>
+    <div><span class="k">P(+2,5)</span><span class="v">66.8%</span></div>
+    <div><span class="k">Ligne book</span><span class="v">1.57 / 2.35 &nbsp;&middot;&nbsp; book 60.7%</span></div>
+    <div><span class="k">Ecart</span><span class="v"><span class='ecart fort'>+6.0% over</span></span></div>
+    <div><span class="k">Esperance au meilleur prix</span><span class="v"><span class='ecart fort'>+5.5%</span></span></div>
+    <div><span class="k">Reference</span><span class="v ref">betfair &middot; marge 2.8%</span></div>
+    <div><span class="k">1 / N / 2</span><span class="v">
+      46% / 23% / 31%</span></div>
+  </div>
+  <div class="colonnes">
+    <table>
+      <thead><tr><th>Moyenne sur 10 matchs</th><th>Magdeburg</th>
+        <th>Holstein Kiel</th></tr></thead>
+      <tbody>
+        <tr><td>Buts marques</td><td class='num'>2.00 (10)</td><td class='num'>1.70 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>1.50 (10)</td><td class='num'>1.20 (10)</td></tr><tr><td>Tirs</td><td class='num'>11.60 (10)</td><td class='num'>11.90 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>4.80 (10)</td><td class='num'>3.70 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>5.10 (10)</td><td class='num'>4.20 (10)</td></tr><tr><td>Corners</td><td class='num'>5.10 (10)</td><td class='num'>5.70 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>60% (10)</td><td class='num'>70% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>50% (10)</td><td class='num'>60% (10)</td></tr><tr><td>Total du match</td><td class='num'>3.50 (10)</td><td class='num'>2.90 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.42 (10)</td><td class='num'>0.46 (10)</td></tr>
+        <tr><td>Forme (5 derniers)</td><td class='num'>VVDDV</td>
+          <td class='num'>VDDNN</td></tr>
+      </tbody>
+    </table>
+    <div class="h2h"><div class='recents'><h4>Magdeburg &mdash; 6 derniers</h4><ul><li>15/08 ext. Osnabruck 3-0 [3]</li><li>08/08 dom. Braunschweig 1-6 [7]</li><li>17/05 dom. Kaiserslautern 0-1 [1]</li><li>09/05 ext. Holstein Kiel 3-1 [4]</li><li>03/05 dom. Hertha 1-0 [1]</li><li>26/04 ext. Nurnberg 0-1 [1]</li></ul><p class='note'>Buts par match : <b>2.83 (6)</b></p></div><div class='recents'><h4>Holstein Kiel &mdash; 6 derniers</h4><ul><li>14/08 dom. St Pauli 2-2 [4]</li><li>08/08 ext. Darmstadt 2-2 [4]</li><li>17/05 ext. Dresden 1-2 [3]</li><li>09/05 dom. Magdeburg 1-3 [4]</li><li>02/05 dom. Braunschweig 2-0 [2]</li><li>25/04 ext. Hertha 1-0 [1]</li></ul><p class='note'>Buts par match : <b>3.00 (6)</b></p></div></div>
+  </div>
+</article>
+<article class="fiche riche">
+  <header>
+    <div class="titre">Man United <em>vs</em> Ipswich
+      <span class="matiere">matiere riche
+        (100%)</span></div>
+    <div class="meta">2026-08-30 &middot; E0</div>
+  </header>
+  <div class="chiffres">
+    <div><span class="k">Total modele</span><span class="v">3.34</span></div>
+    <div><span class="k">P(+2,5)</span><span class="v">64.8%</span></div>
+    <div><span class="k">Ligne book</span><span class="v">1.57 / 2.38 &nbsp;&middot;&nbsp; book 60.0%</span></div>
+    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>+4.8% over</span></span></div>
+    <div><span class="k">Esperance au meilleur prix</span><span class="v"><span class='ecart'>+3.7%</span></span></div>
+    <div><span class="k">Reference</span><span class="v ref">betfair &middot; marge 1.3%</span></div>
+    <div><span class="k">1 / N / 2</span><span class="v">
+      65% / 19% / 16%</span></div>
+  </div>
+  <div class="colonnes">
+    <table>
+      <thead><tr><th>Moyenne sur 10 matchs</th><th>Man United</th>
+        <th>Ipswich</th></tr></thead>
+      <tbody>
+        <tr><td>Buts marques</td><td class='num'>1.80 (10)</td><td class='num'>1.00 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>1.20 (10)</td><td class='num'>2.10 (10)</td></tr><tr><td>Tirs</td><td class='num'>15.50 (10)</td><td class='num'>10.40 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>5.40 (10)</td><td class='num'>2.60 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>3.90 (10)</td><td class='num'>5.60 (10)</td></tr><tr><td>Corners</td><td class='num'>6.00 (10)</td><td class='num'>3.00 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>70% (10)</td><td class='num'>80% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>60% (10)</td><td class='num'>60% (10)</td></tr><tr><td>Total du match</td><td class='num'>3.00 (10)</td><td class='num'>3.10 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.33 (10)</td><td class='num'>0.38 (10)</td></tr>
+        <tr><td>Forme (5 derniers)</td><td class='num'>VNVVD</td>
+          <td class='num'>NDDDV</td></tr>
+      </tbody>
+    </table>
+    <div class="h2h"><div class='recents'><h4>Man United &mdash; 6 derniers</h4><ul><li>22/08 ext. Hull 0-2 [2]</li><li>24/05 ext. Brighton 3-0 [3]</li><li>17/05 dom. Nott&#x27;m Forest 3-2 [5]</li><li>09/05 ext. Sunderland 0-0 [0]</li><li>03/05 dom. Liverpool 3-2 [5]</li><li>27/04 dom. Brentford 2-1 [3]</li></ul><p class='note'>Buts par match : <b>3.00 (6)</b></p></div><div class='recents'><h4>Ipswich &mdash; 6 derniers</h4><ul><li>22/08 dom. Sunderland 2-1 [3]</li><li>25/05 dom. West Ham 1-3 [4]</li><li>18/05 ext. Leicester 0-2 [2]</li><li>10/05 dom. Brentford 0-1 [1]</li><li>03/05 ext. Everton 2-2 [4]</li><li>26/04 ext. Newcastle 0-3 [3]</li></ul><p class='note'>Buts par match : <b>2.83 (6)</b></p></div></div>
+  </div>
+</article>
+<article class="fiche riche">
+  <header>
+    <div class="titre">Rennes <em>vs</em> Le Mans
+      <span class="matiere">matiere riche
+        (100%)</span></div>
+    <div class="meta">2026-08-30 &middot; F1</div>
+  </header>
+  <div class="chiffres">
+    <div><span class="k">Total modele</span><span class="v">2.97</span></div>
+    <div><span class="k">P(+2,5)</span><span class="v">57.1%</span></div>
+    <div><span class="k">Ligne book</span><span class="v">1.57 / 2.38 &nbsp;&middot;&nbsp; book 61.2%</span></div>
+    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>-4.1% under</span></span></div>
+    <div><span class="k">Esperance au meilleur prix</span><span class="v"><span class='ecart'>+2.9%</span></span></div>
+    <div><span class="k">Reference</span><span class="v ref">betfair &middot; marge 2.5%</span></div>
+    <div><span class="k">1 / N / 2</span><span class="v">
+      45% / 25% / 30%</span></div>
+  </div>
+  <div class="colonnes">
+    <table>
+      <thead><tr><th>Moyenne sur 10 matchs</th><th>Rennes</th>
+        <th>Le Mans</th></tr></thead>
+      <tbody>
+        <tr><td>Buts marques</td><td class='num'>1.90 (10)</td><td class='num'>2.20 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>1.70 (10)</td><td class='num'>0.90 (10)</td></tr><tr><td>Tirs</td><td class='num'>16.50 (10)</td><td class='num'>12.90 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>5.90 (10)</td><td class='num'>5.90 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>4.80 (10)</td><td class='num'>3.10 (10)</td></tr><tr><td>Corners</td><td class='num'>7.00 (10)</td><td class='num'>5.00 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>90% (10)</td><td class='num'>50% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>80% (10)</td><td class='num'>50% (10)</td></tr><tr><td>Total du match</td><td class='num'>3.60 (10)</td><td class='num'>3.10 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.32 (10)</td><td class='num'>0.37 (10)</td></tr>
+        <tr><td>Forme (5 derniers)</td><td class='num'>VDVDN</td>
+          <td class='num'>VNNVN</td></tr>
+      </tbody>
+    </table>
+    <div class="h2h"><div class='recents'><h4>Rennes &mdash; 6 derniers</h4><ul><li>23/08 dom. Paris SG 2-2 [4]</li><li>17/05 ext. Marseille 1-3 [4]</li><li>10/05 dom. Paris FC 2-1 [3]</li><li>03/05 ext. Lyon 2-4 [6]</li><li>26/04 dom. Nantes 2-1 [3]</li><li>19/04 ext. Strasbourg 3-0 [3]</li></ul><p class='note'>Buts par match : <b>3.83 (6)</b></p></div><div class='recents'><h4>Le Mans &mdash; 6 derniers</h4><ul><li>22/08 dom. Brest 2-2 [4]</li><li>09/05 ext. Bastia 2-0 [2]</li><li>02/05 dom. Reims 1-1 [2]</li><li>25/04 ext. Grenoble 1-1 [2]</li><li>17/04 dom. Clermont 1-0 [1]</li><li>11/04 ext. Boulogne 0-0 [0]</li></ul><p class='note'>Buts par match : <b>1.83 (6)</b></p></div></div>
+  </div>
+</article>
+<article class="fiche riche">
+  <header>
     <div class="titre">Chelsea <em>vs</em> Brighton
       <span class="matiere">matiere riche
         (100%)</span></div>
@@ -192,8 +355,10 @@ tels quels. C'est ton analyse qui decide.</p>
   <div class="chiffres">
     <div><span class="k">Total modele</span><span class="v">2.90</span></div>
     <div><span class="k">P(+2,5)</span><span class="v">55.5%</span></div>
-    <div><span class="k">Ligne book</span><span class="v">1.62 / 2.30 &nbsp;&middot;&nbsp; book 59.1%</span></div>
-    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>-3.6% under</span></span></div>
+    <div><span class="k">Ligne book</span><span class="v">1.62 / 2.30 &nbsp;&middot;&nbsp; book 59.6%</span></div>
+    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>-4.1% under</span></span></div>
+    <div><span class="k">Esperance au meilleur prix</span><span class="v"><span class='ecart fort'>+5.9%</span></span></div>
+    <div><span class="k">Reference</span><span class="v ref">betfair &middot; marge 0.5%</span></div>
     <div><span class="k">1 / N / 2</span><span class="v">
       41% / 25% / 33%</span></div>
   </div>
@@ -212,30 +377,32 @@ tels quels. C'est ton analyse qui decide.</p>
 </article>
 <article class="fiche riche">
   <header>
-    <div class="titre">Leeds <em>vs</em> Brentford
+    <div class="titre">Celta <em>vs</em> Ath Bilbao
       <span class="matiere">matiere riche
         (100%)</span></div>
-    <div class="meta">2026-08-30 &middot; E0</div>
+    <div class="meta">2026-08-30 &middot; SP1</div>
   </header>
   <div class="chiffres">
-    <div><span class="k">Total modele</span><span class="v">2.69</span></div>
-    <div><span class="k">P(+2,5)</span><span class="v">50.4%</span></div>
-    <div><span class="k">Ligne book</span><span class="v">1.90 / 1.95 &nbsp;&middot;&nbsp; book 50.7%</span></div>
-    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>-0.3% under</span></span></div>
+    <div><span class="k">Total modele</span><span class="v">2.63</span></div>
+    <div><span class="k">P(+2,5)</span><span class="v">48.8%</span></div>
+    <div><span class="k">Ligne book</span><span class="v">2.10 / 1.73 &nbsp;&middot;&nbsp; book 45.3%</span></div>
+    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>+3.5% over</span></span></div>
+    <div><span class="k">Esperance au meilleur prix</span><span class="v"><span class='ecart'>+2.5%</span></span></div>
+    <div><span class="k">Reference</span><span class="v ref">betfair &middot; marge 1.1%</span></div>
     <div><span class="k">1 / N / 2</span><span class="v">
-      38% / 27% / 35%</span></div>
+      48% / 26% / 26%</span></div>
   </div>
   <div class="colonnes">
     <table>
-      <thead><tr><th>Moyenne sur 10 matchs</th><th>Leeds</th>
-        <th>Brentford</th></tr></thead>
+      <thead><tr><th>Moyenne sur 10 matchs</th><th>Celta</th>
+        <th>Ath Bilbao</th></tr></thead>
       <tbody>
-        <tr><td>Buts marques</td><td class='num'>1.30 (10)</td><td class='num'>1.40 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>0.80 (10)</td><td class='num'>1.20 (10)</td></tr><tr><td>Tirs</td><td class='num'>12.60 (10)</td><td class='num'>12.70 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>4.10 (10)</td><td class='num'>3.80 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>4.50 (10)</td><td class='num'>5.20 (10)</td></tr><tr><td>Corners</td><td class='num'>3.90 (10)</td><td class='num'>4.40 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>50% (10)</td><td class='num'>70% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>40% (10)</td><td class='num'>50% (10)</td></tr><tr><td>Total du match</td><td class='num'>2.10 (10)</td><td class='num'>2.60 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.32 (10)</td><td class='num'>0.37 (10)</td></tr>
-        <tr><td>Forme (5 derniers)</td><td class='num'>VNVDV</td>
-          <td class='num'>VDNNV</td></tr>
+        <tr><td>Buts marques</td><td class='num'>1.00 (10)</td><td class='num'>1.20 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>1.30 (10)</td><td class='num'>2.00 (10)</td></tr><tr><td>Tirs</td><td class='num'>7.00 (10)</td><td class='num'>12.90 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>3.30 (10)</td><td class='num'>4.30 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>4.40 (10)</td><td class='num'>4.90 (10)</td></tr><tr><td>Corners</td><td class='num'>3.10 (10)</td><td class='num'>7.40 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>50% (10)</td><td class='num'>50% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>50% (10)</td><td class='num'>60% (10)</td></tr><tr><td>Total du match</td><td class='num'>2.30 (10)</td><td class='num'>3.20 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.30 (10)</td><td class='num'>0.28 (10)</td></tr>
+        <tr><td>Forme (5 derniers)</td><td class='num'>DNVND</td>
+          <td class='num'>DNDDD</td></tr>
       </tbody>
     </table>
-    <div class="h2h"><div class='recents'><h4>Leeds &mdash; 6 derniers</h4><ul><li>22/08 ext. Nott&#x27;m Forest 1-0 [1]</li><li>24/05 ext. West Ham 0-3 [3]</li><li>17/05 dom. Brighton 1-0 [1]</li><li>11/05 ext. Tottenham 1-1 [2]</li><li>01/05 dom. Burnley 3-1 [4]</li><li>22/04 ext. Bournemouth 2-2 [4]</li></ul><p class='note'>Buts par match : <b>2.50 (6)</b></p></div><div class='recents'><h4>Brentford &mdash; 6 derniers</h4><ul><li>22/08 dom. Tottenham 3-0 [3]</li><li>24/05 ext. Liverpool 1-1 [2]</li><li>17/05 dom. Crystal Palace 2-2 [4]</li><li>09/05 ext. Man City 0-3 [3]</li><li>02/05 dom. West Ham 3-0 [3]</li><li>27/04 ext. Man United 1-2 [3]</li></ul><p class='note'>Buts par match : <b>3.00 (6)</b></p></div></div>
+    <div class="h2h"><div class='recents'><h4>Celta &mdash; 6 derniers</h4><ul><li>27/08 dom. Osasuna 1-2 [3]</li><li>22/08 ext. Valencia 0-0 [0]</li><li>23/05 dom. Sevilla 1-0 [1]</li><li>17/05 ext. Ath Bilbao 1-1 [2]</li><li>12/05 dom. Levante 2-3 [5]</li><li>09/05 ext. Ath Madrid 1-0 [1]</li></ul><p class='note'>Buts par match : <b>2.00 (6)</b></p></div><div class='recents'><h4>Ath Bilbao &mdash; 6 derniers</h4><ul><li>27/08 ext. Barcelona 0-2 [2]</li><li>22/08 dom. Sevilla 1-3 [4]</li><li>23/05 ext. Real Madrid 2-4 [6]</li><li>17/05 dom. Celta 1-1 [2]</li><li>13/05 ext. Espanol 0-2 [2]</li><li>10/05 dom. Valencia 0-1 [1]</li></ul><p class='note'>Buts par match : <b>2.83 (6)</b></p></div></div>
   </div>
 </article>
 <article class="fiche riche">
@@ -248,8 +415,10 @@ tels quels. C'est ton analyse qui decide.</p>
   <div class="chiffres">
     <div><span class="k">Total modele</span><span class="v">2.41</span></div>
     <div><span class="k">P(+2,5)</span><span class="v">43.2%</span></div>
-    <div><span class="k">Ligne book</span><span class="v">2.00 / 1.80 &nbsp;&middot;&nbsp; book 47.2%</span></div>
-    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>-4.0% under</span></span></div>
+    <div><span class="k">Ligne book</span><span class="v">2.00 / 1.80 &nbsp;&middot;&nbsp; book 46.2%</span></div>
+    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>-3.0% under</span></span></div>
+    <div><span class="k">Esperance au meilleur prix</span><span class="v"><span class='ecart'>+2.2%</span></span></div>
+    <div><span class="k">Reference</span><span class="v ref">betfair &middot; marge 1.1%</span></div>
     <div><span class="k">1 / N / 2</span><span class="v">
       39% / 28% / 32%</span></div>
   </div>
@@ -268,6 +437,126 @@ tels quels. C'est ton analyse qui decide.</p>
 </article>
 <article class="fiche riche">
   <header>
+    <div class="titre">Napoli <em>vs</em> Como
+      <span class="matiere">matiere riche
+        (100%)</span></div>
+    <div class="meta">2026-08-30 &middot; I1</div>
+  </header>
+  <div class="chiffres">
+    <div><span class="k">Total modele</span><span class="v">2.36</span></div>
+    <div><span class="k">P(+2,5)</span><span class="v">42.0%</span></div>
+    <div><span class="k">Ligne book</span><span class="v">2.30 / 1.62 &nbsp;&middot;&nbsp; book 40.0%</span></div>
+    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>+1.9% over</span></span></div>
+    <div><span class="k">Esperance au meilleur prix</span><span class="v"><span class='ecart'>-0.1%</span></span></div>
+    <div><span class="k">Reference</span><span class="v ref">betfair &middot; marge 1.3%</span></div>
+    <div><span class="k">1 / N / 2</span><span class="v">
+      40% / 29% / 32%</span></div>
+  </div>
+  <div class="colonnes">
+    <table>
+      <thead><tr><th>Moyenne sur 10 matchs</th><th>Napoli</th>
+        <th>Como</th></tr></thead>
+      <tbody>
+        <tr><td>Buts marques</td><td class='num'>1.50 (10)</td><td class='num'>1.80 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>0.60 (10)</td><td class='num'>0.80 (10)</td></tr><tr><td>Tirs</td><td class='num'>14.30 (10)</td><td class='num'>15.50 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>4.40 (10)</td><td class='num'>5.20 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>3.00 (10)</td><td class='num'>2.40 (10)</td></tr><tr><td>Corners</td><td class='num'>6.00 (10)</td><td class='num'>6.00 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>30% (10)</td><td class='num'>40% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>20% (10)</td><td class='num'>40% (10)</td></tr><tr><td>Total du match</td><td class='num'>2.10 (10)</td><td class='num'>2.60 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.34 (10)</td><td class='num'>0.35 (10)</td></tr>
+        <tr><td>Forme (5 derniers)</td><td class='num'>NDVVV</td>
+          <td class='num'>NVVVN</td></tr>
+      </tbody>
+    </table>
+    <div class="h2h"><div class='recents'><h4>Napoli &mdash; 6 derniers</h4><ul><li>22/08 ext. Genoa 2-0 [2]</li><li>24/05 dom. Udinese 1-0 [1]</li><li>17/05 ext. Pisa 3-0 [3]</li><li>11/05 dom. Bologna 2-3 [5]</li><li>02/05 ext. Como 0-0 [0]</li><li>24/04 dom. Cremonese 4-0 [4]</li></ul><p class='note'>Buts par match : <b>2.50 (6)</b></p></div><div class='recents'><h4>Como &mdash; 6 derniers</h4><ul><li>22/08 ext. Udinese 1-1 [2]</li><li>24/05 ext. Cremonese 4-1 [5]</li><li>17/05 dom. Parma 1-0 [1]</li><li>10/05 ext. Verona 1-0 [1]</li><li>02/05 dom. Napoli 0-0 [0]</li><li>26/04 ext. Genoa 2-0 [2]</li></ul><p class='note'>Buts par match : <b>1.83 (6)</b></p></div></div>
+  </div>
+</article>
+<article class="fiche riche">
+  <header>
+    <div class="titre">Lazio <em>vs</em> Genoa
+      <span class="matiere">matiere riche
+        (100%)</span></div>
+    <div class="meta">2026-08-30 &middot; I1</div>
+  </header>
+  <div class="chiffres">
+    <div><span class="k">Total modele</span><span class="v">2.21</span></div>
+    <div><span class="k">P(+2,5)</span><span class="v">38.1%</span></div>
+    <div><span class="k">Ligne book</span><span class="v">2.38 / 1.57 &nbsp;&middot;&nbsp; book 39.8%</span></div>
+    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>-1.7% under</span></span></div>
+    <div><span class="k">Esperance au meilleur prix</span><span class="v"><span class='ecart'>+0.2%</span></span></div>
+    <div><span class="k">Reference</span><span class="v ref">betfair &middot; marge 1.6%</span></div>
+    <div><span class="k">1 / N / 2</span><span class="v">
+      48% / 29% / 23%</span></div>
+  </div>
+  <div class="colonnes">
+    <table>
+      <thead><tr><th>Moyenne sur 10 matchs</th><th>Lazio</th>
+        <th>Genoa</th></tr></thead>
+      <tbody>
+        <tr><td>Buts marques</td><td class='num'>1.30 (10)</td><td class='num'>0.50 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>1.20 (10)</td><td class='num'>1.30 (10)</td></tr><tr><td>Tirs</td><td class='num'>10.40 (10)</td><td class='num'>11.20 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>4.80 (10)</td><td class='num'>2.80 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>4.10 (10)</td><td class='num'>4.30 (10)</td></tr><tr><td>Corners</td><td class='num'>4.00 (10)</td><td class='num'>4.40 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>40% (10)</td><td class='num'>30% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>40% (10)</td><td class='num'>30% (10)</td></tr><tr><td>Total du match</td><td class='num'>2.50 (10)</td><td class='num'>1.80 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.27 (10)</td><td class='num'>0.18 (10)</td></tr>
+        <tr><td>Forme (5 derniers)</td><td class='num'>VDDVV</td>
+          <td class='num'>NNDDD</td></tr>
+      </tbody>
+    </table>
+    <div class="h2h"><div class='recents'><h4>Lazio &mdash; 6 derniers</h4><ul><li>24/08 ext. Bologna 1-0 [1]</li><li>23/05 dom. Pisa 2-1 [3]</li><li>17/05 ext. Roma 0-2 [2]</li><li>09/05 dom. Inter 0-3 [3]</li><li>04/05 ext. Cremonese 2-1 [3]</li><li>27/04 dom. Udinese 3-3 [6]</li></ul><p class='note'>Buts par match : <b>3.00 (6)</b></p></div><div class='recents'><h4>Genoa &mdash; 6 derniers</h4><ul><li>22/08 dom. Napoli 0-2 [2]</li><li>24/05 ext. Lecce 0-1 [1]</li><li>17/05 dom. Milan 1-2 [3]</li><li>10/05 ext. Fiorentina 0-0 [0]</li><li>02/05 ext. Atalanta 0-0 [0]</li><li>26/04 dom. Como 0-2 [2]</li></ul><p class='note'>Buts par match : <b>1.33 (6)</b></p></div></div>
+  </div>
+</article>
+<article class="fiche riche">
+  <header>
+    <div class="titre">Leeds <em>vs</em> Brentford
+      <span class="matiere">matiere riche
+        (100%)</span></div>
+    <div class="meta">2026-08-30 &middot; E0</div>
+  </header>
+  <div class="chiffres">
+    <div><span class="k">Total modele</span><span class="v">2.69</span></div>
+    <div><span class="k">P(+2,5)</span><span class="v">50.4%</span></div>
+    <div><span class="k">Ligne book</span><span class="v">1.90 / 1.95 &nbsp;&middot;&nbsp; book 50.0%</span></div>
+    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>+0.4% over</span></span></div>
+    <div><span class="k">Esperance au meilleur prix</span><span class="v"><span class='ecart fort'>+5.9%</span></span></div>
+    <div><span class="k">Reference</span><span class="v ref">betfair &middot; marge 1.0%</span></div>
+    <div><span class="k">1 / N / 2</span><span class="v">
+      38% / 27% / 35%</span></div>
+  </div>
+  <div class="colonnes">
+    <table>
+      <thead><tr><th>Moyenne sur 10 matchs</th><th>Leeds</th>
+        <th>Brentford</th></tr></thead>
+      <tbody>
+        <tr><td>Buts marques</td><td class='num'>1.30 (10)</td><td class='num'>1.40 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>0.80 (10)</td><td class='num'>1.20 (10)</td></tr><tr><td>Tirs</td><td class='num'>12.60 (10)</td><td class='num'>12.70 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>4.10 (10)</td><td class='num'>3.80 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>4.50 (10)</td><td class='num'>5.20 (10)</td></tr><tr><td>Corners</td><td class='num'>3.90 (10)</td><td class='num'>4.40 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>50% (10)</td><td class='num'>70% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>40% (10)</td><td class='num'>50% (10)</td></tr><tr><td>Total du match</td><td class='num'>2.10 (10)</td><td class='num'>2.60 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.32 (10)</td><td class='num'>0.37 (10)</td></tr>
+        <tr><td>Forme (5 derniers)</td><td class='num'>VNVDV</td>
+          <td class='num'>VDNNV</td></tr>
+      </tbody>
+    </table>
+    <div class="h2h"><div class='recents'><h4>Leeds &mdash; 6 derniers</h4><ul><li>22/08 ext. Nott&#x27;m Forest 1-0 [1]</li><li>24/05 ext. West Ham 0-3 [3]</li><li>17/05 dom. Brighton 1-0 [1]</li><li>11/05 ext. Tottenham 1-1 [2]</li><li>01/05 dom. Burnley 3-1 [4]</li><li>22/04 ext. Bournemouth 2-2 [4]</li></ul><p class='note'>Buts par match : <b>2.50 (6)</b></p></div><div class='recents'><h4>Brentford &mdash; 6 derniers</h4><ul><li>22/08 dom. Tottenham 3-0 [3]</li><li>24/05 ext. Liverpool 1-1 [2]</li><li>17/05 dom. Crystal Palace 2-2 [4]</li><li>09/05 ext. Man City 0-3 [3]</li><li>02/05 dom. West Ham 3-0 [3]</li><li>27/04 ext. Man United 1-2 [3]</li></ul><p class='note'>Buts par match : <b>3.00 (6)</b></p></div></div>
+  </div>
+</article>
+<article class="fiche riche">
+  <header>
+    <div class="titre">La Coruna <em>vs</em> Valencia
+      <span class="matiere">matiere riche
+        (100%)</span></div>
+    <div class="meta">2026-08-30 &middot; SP1</div>
+  </header>
+  <div class="chiffres">
+    <div><span class="k">Total modele</span><span class="v">2.27</span></div>
+    <div><span class="k">P(+2,5)</span><span class="v">39.7%</span></div>
+    <div><span class="k">Ligne book</span><span class="v">2.38 / 1.57 &nbsp;&middot;&nbsp; book 39.3%</span></div>
+    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>+0.4% over</span></span></div>
+    <div><span class="k">Esperance au meilleur prix</span><span class="v"><span class='ecart'>-5.6%</span></span></div>
+    <div><span class="k">Reference</span><span class="v ref">betfair &middot; marge 1.3%</span></div>
+    <div><span class="k">1 / N / 2</span><span class="v">
+      40% / 29% / 30%</span></div>
+  </div>
+  <div class="colonnes">
+    <table>
+      <thead><tr><th>Moyenne sur 10 matchs</th><th>La Coruna</th>
+        <th>Valencia</th></tr></thead>
+      <tbody>
+        <tr><td>Buts marques</td><td class='num'>1.40 (10)</td><td class='num'>1.20 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>1.70 (10)</td><td class='num'>1.10 (10)</td></tr><tr><td>Tirs</td><td class='num'>12.30 (10)</td><td class='num'>13.10 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>4.60 (10)</td><td class='num'>3.70 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>4.80 (10)</td><td class='num'>3.90 (10)</td></tr><tr><td>Corners</td><td class='num'>6.10 (10)</td><td class='num'>4.60 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>50% (10)</td><td class='num'>30% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>80% (10)</td><td class='num'>50% (10)</td></tr><tr><td>Total du match</td><td class='num'>3.10 (10)</td><td class='num'>2.30 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.30 (10)</td><td class='num'>0.32 (10)</td></tr>
+        <tr><td>Forme (5 derniers)</td><td class='num'>NDDNN</td>
+          <td class='num'>NVVND</td></tr>
+      </tbody>
+    </table>
+    <div class="h2h"><div class='recents'><h4>La Coruna &mdash; 6 derniers</h4><ul><li>24/08 ext. Malaga 1-1 [2]</li><li>17/08 dom. Elche 1-1 [2]</li><li>20/05 ext. Valencia 1-2 [3]</li><li>12/05 dom. Villarreal 2-4 [6]</li><li>05/05 ext. Celta 1-1 [2]</li><li>29/04 dom. Barcelona 2-4 [6]</li></ul><p class='note'>Buts par match : <b>3.50 (6)</b></p></div><div class='recents'><h4>Valencia &mdash; 6 derniers</h4><ul><li>25/08 dom. Betis 0-1 [1]</li><li>22/08 dom. Celta 0-0 [0]</li><li>23/05 dom. Barcelona 3-1 [4]</li><li>17/05 ext. Sociedad 4-3 [7]</li><li>14/05 dom. Vallecano 1-1 [2]</li><li>10/05 ext. Ath Bilbao 1-0 [1]</li></ul><p class='note'>Buts par match : <b>2.50 (6)</b></p></div></div>
+  </div>
+</article>
+<article class="fiche riche">
+  <header>
     <div class="titre">Paris FC <em>vs</em> Nice
       <span class="matiere">matiere riche
         (100%)</span></div>
@@ -276,8 +565,10 @@ tels quels. C'est ton analyse qui decide.</p>
   <div class="chiffres">
     <div><span class="k">Total modele</span><span class="v">2.54</span></div>
     <div><span class="k">P(+2,5)</span><span class="v">46.6%</span></div>
-    <div><span class="k">Ligne book</span><span class="v">2.10 / 1.73 &nbsp;&middot;&nbsp; book 44.9%</span></div>
-    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>+1.7% over</span></span></div>
+    <div><span class="k">Ligne book</span><span class="v">2.10 / 1.73 &nbsp;&middot;&nbsp; book 46.3%</span></div>
+    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>+0.3% over</span></span></div>
+    <div><span class="k">Esperance au meilleur prix</span><span class="v"><span class='ecart'>-2.2%</span></span></div>
+    <div><span class="k">Reference</span><span class="v ref">betfair &middot; marge 1.8%</span></div>
     <div><span class="k">1 / N / 2</span><span class="v">
       50% / 26% / 24%</span></div>
   </div>
@@ -304,8 +595,10 @@ tels quels. C'est ton analyse qui decide.</p>
   <div class="chiffres">
     <div><span class="k">Total modele</span><span class="v">2.84</span></div>
     <div><span class="k">P(+2,5)</span><span class="v">54.1%</span></div>
-    <div><span class="k">Ligne book</span><span class="v">1.73 / 2.10 &nbsp;&middot;&nbsp; book 55.1%</span></div>
-    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>-1.0% under</span></span></div>
+    <div><span class="k">Ligne book</span><span class="v">1.73 / 2.10 &nbsp;&middot;&nbsp; book 54.3%</span></div>
+    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>-0.2% under</span></span></div>
+    <div><span class="k">Esperance au meilleur prix</span><span class="v"><span class='ecart'>-3.6%</span></span></div>
+    <div><span class="k">Reference</span><span class="v ref">betfair &middot; marge 1.2%</span></div>
     <div><span class="k">1 / N / 2</span><span class="v">
       50% / 25% / 25%</span></div>
   </div>
@@ -324,282 +617,32 @@ tels quels. C'est ton analyse qui decide.</p>
 </article>
 <article class="fiche riche">
   <header>
-    <div class="titre">Real Madrid <em>vs</em> Malaga
+    <div class="titre">Darmstadt <em>vs</em> Hannover
       <span class="matiere">matiere riche
         (100%)</span></div>
-    <div class="meta">2026-08-30 &middot; SP1</div>
+    <div class="meta">2026-08-30 &middot; D2</div>
   </header>
   <div class="chiffres">
-    <div><span class="k">Total modele</span><span class="v">2.96</span></div>
-    <div><span class="k">P(+2,5)</span><span class="v">56.8%</span></div>
-    <div><span class="k">Ligne book</span><span class="v">1.33 / 3.40 &nbsp;&middot;&nbsp; book 72.9%</span></div>
-    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>-16.0% under</span></span></div>
+    <div><span class="k">Total modele</span><span class="v">2.91</span></div>
+    <div><span class="k">P(+2,5)</span><span class="v">55.5%</span></div>
+    <div><span class="k">Ligne book</span><span class="v">1.53 / 2.40 &nbsp;&middot;&nbsp; book 61.8%</span></div>
+    <div><span class="k">Ecart</span><span class="v"><span class='sansligne'>bet365 &middot; marge 7.0% &middot; marge trop large</span></span></div>
+    <div><span class="k">Esperance au meilleur prix</span><span class="v"><span class='sansligne'>&mdash;</span></span></div>
+    <div><span class="k">Reference</span><span class="v ref">bet365 &middot; marge 7.0% &middot; marge trop large</span></div>
     <div><span class="k">1 / N / 2</span><span class="v">
-      71% / 18% / 11%</span></div>
+      40% / 25% / 34%</span></div>
   </div>
   <div class="colonnes">
     <table>
-      <thead><tr><th>Moyenne sur 10 matchs</th><th>Real Madrid</th>
-        <th>Malaga</th></tr></thead>
+      <thead><tr><th>Moyenne sur 10 matchs</th><th>Darmstadt</th>
+        <th>Hannover</th></tr></thead>
       <tbody>
-        <tr><td>Buts marques</td><td class='num'>1.90 (10)</td><td class='num'>0.80 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>0.90 (10)</td><td class='num'>1.90 (10)</td></tr><tr><td>Tirs</td><td class='num'>16.60 (10)</td><td class='num'>9.60 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>6.60 (10)</td><td class='num'>2.70 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>3.60 (10)</td><td class='num'>4.60 (10)</td></tr><tr><td>Corners</td><td class='num'>6.10 (10)</td><td class='num'>4.10 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>40% (10)</td><td class='num'>50% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>60% (10)</td><td class='num'>50% (10)</td></tr><tr><td>Total du match</td><td class='num'>2.80 (10)</td><td class='num'>2.70 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.29 (10)</td><td class='num'>0.30 (10)</td></tr>
-        <tr><td>Forme (5 derniers)</td><td class='num'>VVVVV</td>
-          <td class='num'>DDDDN</td></tr>
+        <tr><td>Buts marques</td><td class='num'>1.10 (10)</td><td class='num'>1.60 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>1.90 (10)</td><td class='num'>1.40 (10)</td></tr><tr><td>Tirs</td><td class='num'>14.10 (10)</td><td class='num'>14.00 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>3.80 (10)</td><td class='num'>5.20 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>6.10 (10)</td><td class='num'>4.60 (10)</td></tr><tr><td>Corners</td><td class='num'>5.30 (10)</td><td class='num'>6.90 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>50% (10)</td><td class='num'>40% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>70% (10)</td><td class='num'>70% (10)</td></tr><tr><td>Total du match</td><td class='num'>3.00 (10)</td><td class='num'>3.00 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.29 (10)</td><td class='num'>0.31 (10)</td></tr>
+        <tr><td>Forme (5 derniers)</td><td class='num'>DNDND</td>
+          <td class='num'>NNNDD</td></tr>
       </tbody>
     </table>
-    <div class="h2h"><div class='recents'><h4>Real Madrid &mdash; 6 derniers</h4><ul><li>26/08 dom. Sociedad 4-1 [5]</li><li>22/08 ext. Espanol 2-1 [3]</li><li>23/05 dom. Ath Bilbao 4-2 [6]</li><li>17/05 ext. Sevilla 1-0 [1]</li><li>14/05 dom. Oviedo 2-0 [2]</li><li>10/05 ext. Barcelona 0-2 [2]</li></ul><p class='note'>Buts par match : <b>3.17 (6)</b></p></div><div class='recents'><h4>Malaga &mdash; 6 derniers</h4><ul><li>24/08 dom. La Coruna 1-1 [2]</li><li>19/08 ext. Ath Madrid 0-2 [2]</li><li>19/05 dom. Getafe 0-1 [1]</li><li>13/05 ext. Espanol 1-4 [5]</li><li>06/05 dom. Alaves 0-3 [3]</li><li>30/04 ext. Betis 1-2 [3]</li></ul><p class='note'>Buts par match : <b>2.67 (6)</b></p></div></div>
-  </div>
-</article>
-<article class="fiche riche">
-  <header>
-    <div class="titre">Rennes <em>vs</em> Le Mans
-      <span class="matiere">matiere riche
-        (100%)</span></div>
-    <div class="meta">2026-08-30 &middot; F1</div>
-  </header>
-  <div class="chiffres">
-    <div><span class="k">Total modele</span><span class="v">2.97</span></div>
-    <div><span class="k">P(+2,5)</span><span class="v">57.1%</span></div>
-    <div><span class="k">Ligne book</span><span class="v">1.57 / 2.38 &nbsp;&middot;&nbsp; book 60.8%</span></div>
-    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>-3.7% under</span></span></div>
-    <div><span class="k">1 / N / 2</span><span class="v">
-      45% / 25% / 30%</span></div>
-  </div>
-  <div class="colonnes">
-    <table>
-      <thead><tr><th>Moyenne sur 10 matchs</th><th>Rennes</th>
-        <th>Le Mans</th></tr></thead>
-      <tbody>
-        <tr><td>Buts marques</td><td class='num'>1.90 (10)</td><td class='num'>2.20 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>1.70 (10)</td><td class='num'>0.90 (10)</td></tr><tr><td>Tirs</td><td class='num'>16.50 (10)</td><td class='num'>12.90 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>5.90 (10)</td><td class='num'>5.90 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>4.80 (10)</td><td class='num'>3.10 (10)</td></tr><tr><td>Corners</td><td class='num'>7.00 (10)</td><td class='num'>5.00 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>90% (10)</td><td class='num'>50% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>80% (10)</td><td class='num'>50% (10)</td></tr><tr><td>Total du match</td><td class='num'>3.60 (10)</td><td class='num'>3.10 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.32 (10)</td><td class='num'>0.37 (10)</td></tr>
-        <tr><td>Forme (5 derniers)</td><td class='num'>VDVDN</td>
-          <td class='num'>VNNVN</td></tr>
-      </tbody>
-    </table>
-    <div class="h2h"><div class='recents'><h4>Rennes &mdash; 6 derniers</h4><ul><li>23/08 dom. Paris SG 2-2 [4]</li><li>17/05 ext. Marseille 1-3 [4]</li><li>10/05 dom. Paris FC 2-1 [3]</li><li>03/05 ext. Lyon 2-4 [6]</li><li>26/04 dom. Nantes 2-1 [3]</li><li>19/04 ext. Strasbourg 3-0 [3]</li></ul><p class='note'>Buts par match : <b>3.83 (6)</b></p></div><div class='recents'><h4>Le Mans &mdash; 6 derniers</h4><ul><li>22/08 dom. Brest 2-2 [4]</li><li>09/05 ext. Bastia 2-0 [2]</li><li>02/05 dom. Reims 1-1 [2]</li><li>25/04 ext. Grenoble 1-1 [2]</li><li>17/04 dom. Clermont 1-0 [1]</li><li>11/04 ext. Boulogne 0-0 [0]</li></ul><p class='note'>Buts par match : <b>1.83 (6)</b></p></div></div>
-  </div>
-</article>
-<article class="fiche riche">
-  <header>
-    <div class="titre">Augsburg <em>vs</em> Schalke 04
-      <span class="matiere">matiere riche
-        (100%)</span></div>
-    <div class="meta">2026-08-30 &middot; D1</div>
-  </header>
-  <div class="chiffres">
-    <div><span class="k">Total modele</span><span class="v">2.65</span></div>
-    <div><span class="k">P(+2,5)</span><span class="v">49.3%</span></div>
-    <div><span class="k">Ligne book</span><span class="v">1.73 / 2.10 &nbsp;&middot;&nbsp; book 55.1%</span></div>
-    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>-5.8% under</span></span></div>
-    <div><span class="k">1 / N / 2</span><span class="v">
-      36% / 27% / 37%</span></div>
-  </div>
-  <div class="colonnes">
-    <table>
-      <thead><tr><th>Moyenne sur 10 matchs</th><th>Augsburg</th>
-        <th>Schalke 04</th></tr></thead>
-      <tbody>
-        <tr><td>Buts marques</td><td class='num'>1.50 (10)</td><td class='num'>1.60 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>2.00 (10)</td><td class='num'>1.00 (10)</td></tr><tr><td>Tirs</td><td class='num'>13.90 (10)</td><td class='num'>16.10 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>5.20 (10)</td><td class='num'>5.50 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>6.30 (10)</td><td class='num'>3.30 (10)</td></tr><tr><td>Corners</td><td class='num'>4.40 (10)</td><td class='num'>4.30 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>70% (10)</td><td class='num'>50% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>80% (10)</td><td class='num'>50% (10)</td></tr><tr><td>Total du match</td><td class='num'>3.50 (10)</td><td class='num'>2.60 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.29 (10)</td><td class='num'>0.29 (10)</td></tr>
-        <tr><td>Forme (5 derniers)</td><td class='num'>VNVVD</td>
-          <td class='num'>VVVDV</td></tr>
-      </tbody>
-    </table>
-    <div class="h2h"><div class='recents'><h4>Augsburg &mdash; 6 derniers</h4><ul><li>16/05 ext. Union Berlin 0-4 [4]</li><li>09/05 dom. M&#x27;gladbach 3-1 [4]</li><li>02/05 ext. Werder Bremen 3-1 [4]</li><li>25/04 dom. Ein Frankfurt 1-1 [2]</li><li>18/04 ext. Leverkusen 2-1 [3]</li><li>10/04 dom. Hoffenheim 2-2 [4]</li></ul><p class='note'>Buts par match : <b>3.50 (6)</b></p></div><div class='recents'><h4>Schalke 04 &mdash; 6 derniers</h4><ul><li>17/05 dom. Braunschweig 1-0 [1]</li><li>09/05 ext. Nurnberg 0-3 [3]</li><li>02/05 dom. Fortuna Dusseldorf 1-0 [1]</li><li>26/04 ext. Paderborn 3-2 [5]</li><li>19/04 dom. PreuÃen MÃ¼nster 4-1 [5]</li><li>12/04 ext. Elversberg 2-1 [3]</li></ul><p class='note'>Buts par match : <b>3.00 (6)</b></p></div></div>
-  </div>
-</article>
-<article class="fiche riche">
-  <header>
-    <div class="titre">Man United <em>vs</em> Ipswich
-      <span class="matiere">matiere riche
-        (100%)</span></div>
-    <div class="meta">2026-08-30 &middot; E0</div>
-  </header>
-  <div class="chiffres">
-    <div><span class="k">Total modele</span><span class="v">3.34</span></div>
-    <div><span class="k">P(+2,5)</span><span class="v">64.8%</span></div>
-    <div><span class="k">Ligne book</span><span class="v">1.57 / 2.38 &nbsp;&middot;&nbsp; book 60.8%</span></div>
-    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>+3.9% over</span></span></div>
-    <div><span class="k">1 / N / 2</span><span class="v">
-      65% / 19% / 16%</span></div>
-  </div>
-  <div class="colonnes">
-    <table>
-      <thead><tr><th>Moyenne sur 10 matchs</th><th>Man United</th>
-        <th>Ipswich</th></tr></thead>
-      <tbody>
-        <tr><td>Buts marques</td><td class='num'>1.80 (10)</td><td class='num'>1.00 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>1.20 (10)</td><td class='num'>2.10 (10)</td></tr><tr><td>Tirs</td><td class='num'>15.50 (10)</td><td class='num'>10.40 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>5.40 (10)</td><td class='num'>2.60 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>3.90 (10)</td><td class='num'>5.60 (10)</td></tr><tr><td>Corners</td><td class='num'>6.00 (10)</td><td class='num'>3.00 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>70% (10)</td><td class='num'>80% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>60% (10)</td><td class='num'>60% (10)</td></tr><tr><td>Total du match</td><td class='num'>3.00 (10)</td><td class='num'>3.10 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.33 (10)</td><td class='num'>0.38 (10)</td></tr>
-        <tr><td>Forme (5 derniers)</td><td class='num'>VNVVD</td>
-          <td class='num'>NDDDV</td></tr>
-      </tbody>
-    </table>
-    <div class="h2h"><div class='recents'><h4>Man United &mdash; 6 derniers</h4><ul><li>22/08 ext. Hull 0-2 [2]</li><li>24/05 ext. Brighton 3-0 [3]</li><li>17/05 dom. Nott&#x27;m Forest 3-2 [5]</li><li>09/05 ext. Sunderland 0-0 [0]</li><li>03/05 dom. Liverpool 3-2 [5]</li><li>27/04 dom. Brentford 2-1 [3]</li></ul><p class='note'>Buts par match : <b>3.00 (6)</b></p></div><div class='recents'><h4>Ipswich &mdash; 6 derniers</h4><ul><li>22/08 dom. Sunderland 2-1 [3]</li><li>25/05 dom. West Ham 1-3 [4]</li><li>18/05 ext. Leicester 0-2 [2]</li><li>10/05 dom. Brentford 0-1 [1]</li><li>03/05 ext. Everton 2-2 [4]</li><li>26/04 ext. Newcastle 0-3 [3]</li></ul><p class='note'>Buts par match : <b>2.83 (6)</b></p></div></div>
-  </div>
-</article>
-<article class="fiche riche">
-  <header>
-    <div class="titre">Napoli <em>vs</em> Como
-      <span class="matiere">matiere riche
-        (100%)</span></div>
-    <div class="meta">2026-08-30 &middot; I1</div>
-  </header>
-  <div class="chiffres">
-    <div><span class="k">Total modele</span><span class="v">2.36</span></div>
-    <div><span class="k">P(+2,5)</span><span class="v">42.0%</span></div>
-    <div><span class="k">Ligne book</span><span class="v">2.30 / 1.62 &nbsp;&middot;&nbsp; book 40.9%</span></div>
-    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>+1.1% over</span></span></div>
-    <div><span class="k">1 / N / 2</span><span class="v">
-      40% / 29% / 32%</span></div>
-  </div>
-  <div class="colonnes">
-    <table>
-      <thead><tr><th>Moyenne sur 10 matchs</th><th>Napoli</th>
-        <th>Como</th></tr></thead>
-      <tbody>
-        <tr><td>Buts marques</td><td class='num'>1.50 (10)</td><td class='num'>1.80 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>0.60 (10)</td><td class='num'>0.80 (10)</td></tr><tr><td>Tirs</td><td class='num'>14.30 (10)</td><td class='num'>15.50 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>4.40 (10)</td><td class='num'>5.20 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>3.00 (10)</td><td class='num'>2.40 (10)</td></tr><tr><td>Corners</td><td class='num'>6.00 (10)</td><td class='num'>6.00 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>30% (10)</td><td class='num'>40% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>20% (10)</td><td class='num'>40% (10)</td></tr><tr><td>Total du match</td><td class='num'>2.10 (10)</td><td class='num'>2.60 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.34 (10)</td><td class='num'>0.35 (10)</td></tr>
-        <tr><td>Forme (5 derniers)</td><td class='num'>NDVVV</td>
-          <td class='num'>NVVVN</td></tr>
-      </tbody>
-    </table>
-    <div class="h2h"><div class='recents'><h4>Napoli &mdash; 6 derniers</h4><ul><li>22/08 ext. Genoa 2-0 [2]</li><li>24/05 dom. Udinese 1-0 [1]</li><li>17/05 ext. Pisa 3-0 [3]</li><li>11/05 dom. Bologna 2-3 [5]</li><li>02/05 ext. Como 0-0 [0]</li><li>24/04 dom. Cremonese 4-0 [4]</li></ul><p class='note'>Buts par match : <b>2.50 (6)</b></p></div><div class='recents'><h4>Como &mdash; 6 derniers</h4><ul><li>22/08 ext. Udinese 1-1 [2]</li><li>24/05 ext. Cremonese 4-1 [5]</li><li>17/05 dom. Parma 1-0 [1]</li><li>10/05 ext. Verona 1-0 [1]</li><li>02/05 dom. Napoli 0-0 [0]</li><li>26/04 ext. Genoa 2-0 [2]</li></ul><p class='note'>Buts par match : <b>1.83 (6)</b></p></div></div>
-  </div>
-</article>
-<article class="fiche riche">
-  <header>
-    <div class="titre">La Coruna <em>vs</em> Valencia
-      <span class="matiere">matiere riche
-        (100%)</span></div>
-    <div class="meta">2026-08-30 &middot; SP1</div>
-  </header>
-  <div class="chiffres">
-    <div><span class="k">Total modele</span><span class="v">2.27</span></div>
-    <div><span class="k">P(+2,5)</span><span class="v">39.7%</span></div>
-    <div><span class="k">Ligne book</span><span class="v">2.38 / 1.57 &nbsp;&middot;&nbsp; book 39.2%</span></div>
-    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>+0.5% over</span></span></div>
-    <div><span class="k">1 / N / 2</span><span class="v">
-      40% / 29% / 30%</span></div>
-  </div>
-  <div class="colonnes">
-    <table>
-      <thead><tr><th>Moyenne sur 10 matchs</th><th>La Coruna</th>
-        <th>Valencia</th></tr></thead>
-      <tbody>
-        <tr><td>Buts marques</td><td class='num'>1.40 (10)</td><td class='num'>1.20 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>1.70 (10)</td><td class='num'>1.10 (10)</td></tr><tr><td>Tirs</td><td class='num'>12.30 (10)</td><td class='num'>13.10 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>4.60 (10)</td><td class='num'>3.70 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>4.80 (10)</td><td class='num'>3.90 (10)</td></tr><tr><td>Corners</td><td class='num'>6.10 (10)</td><td class='num'>4.60 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>50% (10)</td><td class='num'>30% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>80% (10)</td><td class='num'>50% (10)</td></tr><tr><td>Total du match</td><td class='num'>3.10 (10)</td><td class='num'>2.30 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.30 (10)</td><td class='num'>0.32 (10)</td></tr>
-        <tr><td>Forme (5 derniers)</td><td class='num'>NDDNN</td>
-          <td class='num'>NVVND</td></tr>
-      </tbody>
-    </table>
-    <div class="h2h"><div class='recents'><h4>La Coruna &mdash; 6 derniers</h4><ul><li>24/08 ext. Malaga 1-1 [2]</li><li>17/08 dom. Elche 1-1 [2]</li><li>20/05 ext. Valencia 1-2 [3]</li><li>12/05 dom. Villarreal 2-4 [6]</li><li>05/05 ext. Celta 1-1 [2]</li><li>29/04 dom. Barcelona 2-4 [6]</li></ul><p class='note'>Buts par match : <b>3.50 (6)</b></p></div><div class='recents'><h4>Valencia &mdash; 6 derniers</h4><ul><li>25/08 dom. Betis 0-1 [1]</li><li>22/08 dom. Celta 0-0 [0]</li><li>23/05 dom. Barcelona 3-1 [4]</li><li>17/05 ext. Sociedad 4-3 [7]</li><li>14/05 dom. Vallecano 1-1 [2]</li><li>10/05 ext. Ath Bilbao 1-0 [1]</li></ul><p class='note'>Buts par match : <b>2.50 (6)</b></p></div></div>
-  </div>
-</article>
-<article class="fiche riche">
-  <header>
-    <div class="titre">Monaco <em>vs</em> Marseille
-      <span class="matiere">matiere riche
-        (100%)</span></div>
-    <div class="meta">2026-08-30 &middot; F1</div>
-  </header>
-  <div class="chiffres">
-    <div><span class="k">Total modele</span><span class="v">3.49</span></div>
-    <div><span class="k">P(+2,5)</span><span class="v">67.7%</span></div>
-    <div><span class="k">Ligne book</span><span class="v">1.57 / 2.38 &nbsp;&middot;&nbsp; book 60.8%</span></div>
-    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>+6.8% over</span></span></div>
-    <div><span class="k">1 / N / 2</span><span class="v">
-      42% / 23% / 36%</span></div>
-  </div>
-  <div class="colonnes">
-    <table>
-      <thead><tr><th>Moyenne sur 10 matchs</th><th>Monaco</th>
-        <th>Marseille</th></tr></thead>
-      <tbody>
-        <tr><td>Buts marques</td><td class='num'>1.80 (10)</td><td class='num'>1.50 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>1.70 (10)</td><td class='num'>1.20 (10)</td></tr><tr><td>Tirs</td><td class='num'>13.80 (10)</td><td class='num'>17.20 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>5.10 (10)</td><td class='num'>6.20 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>4.60 (10)</td><td class='num'>3.40 (10)</td></tr><tr><td>Corners</td><td class='num'>5.70 (10)</td><td class='num'>5.90 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>70% (10)</td><td class='num'>60% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>70% (10)</td><td class='num'>50% (10)</td></tr><tr><td>Total du match</td><td class='num'>3.50 (10)</td><td class='num'>2.70 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.35 (10)</td><td class='num'>0.24 (10)</td></tr>
-        <tr><td>Forme (5 derniers)</td><td class='num'>NVDDV</td>
-          <td class='num'>NDVVV</td></tr>
-      </tbody>
-    </table>
-    <div class="h2h"><div class='recents'><h4>Monaco &mdash; 6 derniers</h4><ul><li>23/08 ext. Le Havre 1-0 [1]</li><li>17/05 ext. Strasbourg 4-5 [9]</li><li>10/05 dom. Lille 0-1 [1]</li><li>02/05 ext. Metz 2-1 [3]</li><li>25/04 ext. Toulouse 2-2 [4]</li><li>19/04 dom. Auxerre 2-2 [4]</li></ul><p class='note'>Buts par match : <b>3.67 (6)</b></p></div><div class='recents'><h4>Marseille &mdash; 6 derniers</h4><ul><li>21/08 dom. Strasbourg 4-0 [4]</li><li>17/05 dom. Rennes 3-1 [4]</li><li>10/05 ext. Le Havre 1-0 [1]</li><li>02/05 ext. Nantes 0-3 [3]</li><li>26/04 dom. Nice 1-1 [2]</li><li>18/04 ext. Lorient 0-2 [2]</li></ul><p class='note'>Buts par match : <b>2.67 (6)</b></p></div></div>
-  </div>
-</article>
-<article class="fiche riche">
-  <header>
-    <div class="titre">Cagliari <em>vs</em> Inter
-      <span class="matiere">matiere riche
-        (100%)</span></div>
-    <div class="meta">2026-08-30 &middot; I1</div>
-  </header>
-  <div class="chiffres">
-    <div><span class="k">Total modele</span><span class="v">3.11</span></div>
-    <div><span class="k">P(+2,5)</span><span class="v">60.2%</span></div>
-    <div><span class="k">Ligne book</span><span class="v">1.93 / 1.93 &nbsp;&middot;&nbsp; book 50.0%</span></div>
-    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>+10.2% over</span></span></div>
-    <div><span class="k">1 / N / 2</span><span class="v">
-      16% / 21% / 63%</span></div>
-  </div>
-  <div class="colonnes">
-    <table>
-      <thead><tr><th>Moyenne sur 10 matchs</th><th>Cagliari</th>
-        <th>Inter</th></tr></thead>
-      <tbody>
-        <tr><td>Buts marques</td><td class='num'>1.00 (10)</td><td class='num'>2.80 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>1.20 (10)</td><td class='num'>1.30 (10)</td></tr><tr><td>Tirs</td><td class='num'>13.60 (10)</td><td class='num'>13.50 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>3.90 (10)</td><td class='num'>5.40 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>3.80 (10)</td><td class='num'>3.60 (10)</td></tr><tr><td>Corners</td><td class='num'>4.50 (10)</td><td class='num'>4.80 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>50% (10)</td><td class='num'>70% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>40% (10)</td><td class='num'>70% (10)</td></tr><tr><td>Total du match</td><td class='num'>2.20 (10)</td><td class='num'>4.10 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.26 (10)</td><td class='num'>0.52 (10)</td></tr>
-        <tr><td>Forme (5 derniers)</td><td class='num'>NDVVV</td>
-          <td class='num'>VVNNV</td></tr>
-      </tbody>
-    </table>
-    <div class="h2h"><div class='recents'><h4>Cagliari &mdash; 6 derniers</h4><ul><li>22/08 ext. Parma 1-0 [1]</li><li>24/05 ext. Milan 2-1 [3]</li><li>17/05 dom. Torino 2-1 [3]</li><li>09/05 dom. Udinese 0-2 [2]</li><li>03/05 ext. Bologna 0-0 [0]</li><li>27/04 dom. Atalanta 3-2 [5]</li></ul><p class='note'>Buts par match : <b>2.33 (6)</b></p></div><div class='recents'><h4>Inter &mdash; 6 derniers</h4><ul><li>22/08 dom. Monza 4-1 [5]</li><li>23/05 ext. Bologna 3-3 [6]</li><li>17/05 dom. Verona 1-1 [2]</li><li>09/05 ext. Lazio 3-0 [3]</li><li>03/05 dom. Parma 2-0 [2]</li><li>26/04 ext. Torino 2-2 [4]</li></ul><p class='note'>Buts par match : <b>3.67 (6)</b></p></div></div>
-  </div>
-</article>
-<article class="fiche riche">
-  <header>
-    <div class="titre">Lazio <em>vs</em> Genoa
-      <span class="matiere">matiere riche
-        (100%)</span></div>
-    <div class="meta">2026-08-30 &middot; I1</div>
-  </header>
-  <div class="chiffres">
-    <div><span class="k">Total modele</span><span class="v">2.21</span></div>
-    <div><span class="k">P(+2,5)</span><span class="v">38.1%</span></div>
-    <div><span class="k">Ligne book</span><span class="v">2.38 / 1.57 &nbsp;&middot;&nbsp; book 39.2%</span></div>
-    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>-1.0% under</span></span></div>
-    <div><span class="k">1 / N / 2</span><span class="v">
-      48% / 29% / 23%</span></div>
-  </div>
-  <div class="colonnes">
-    <table>
-      <thead><tr><th>Moyenne sur 10 matchs</th><th>Lazio</th>
-        <th>Genoa</th></tr></thead>
-      <tbody>
-        <tr><td>Buts marques</td><td class='num'>1.30 (10)</td><td class='num'>0.50 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>1.20 (10)</td><td class='num'>1.30 (10)</td></tr><tr><td>Tirs</td><td class='num'>10.40 (10)</td><td class='num'>11.20 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>4.80 (10)</td><td class='num'>2.80 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>4.10 (10)</td><td class='num'>4.30 (10)</td></tr><tr><td>Corners</td><td class='num'>4.00 (10)</td><td class='num'>4.40 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>40% (10)</td><td class='num'>30% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>40% (10)</td><td class='num'>30% (10)</td></tr><tr><td>Total du match</td><td class='num'>2.50 (10)</td><td class='num'>1.80 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.27 (10)</td><td class='num'>0.18 (10)</td></tr>
-        <tr><td>Forme (5 derniers)</td><td class='num'>VDDVV</td>
-          <td class='num'>NNDDD</td></tr>
-      </tbody>
-    </table>
-    <div class="h2h"><div class='recents'><h4>Lazio &mdash; 6 derniers</h4><ul><li>24/08 ext. Bologna 1-0 [1]</li><li>23/05 dom. Pisa 2-1 [3]</li><li>17/05 ext. Roma 0-2 [2]</li><li>09/05 dom. Inter 0-3 [3]</li><li>04/05 ext. Cremonese 2-1 [3]</li><li>27/04 dom. Udinese 3-3 [6]</li></ul><p class='note'>Buts par match : <b>3.00 (6)</b></p></div><div class='recents'><h4>Genoa &mdash; 6 derniers</h4><ul><li>22/08 dom. Napoli 0-2 [2]</li><li>24/05 ext. Lecce 0-1 [1]</li><li>17/05 dom. Milan 1-2 [3]</li><li>10/05 ext. Fiorentina 0-0 [0]</li><li>02/05 ext. Atalanta 0-0 [0]</li><li>26/04 dom. Como 0-2 [2]</li></ul><p class='note'>Buts par match : <b>1.33 (6)</b></p></div></div>
-  </div>
-</article>
-<article class="fiche riche">
-  <header>
-    <div class="titre">Celta <em>vs</em> Ath Bilbao
-      <span class="matiere">matiere riche
-        (100%)</span></div>
-    <div class="meta">2026-08-30 &middot; SP1</div>
-  </header>
-  <div class="chiffres">
-    <div><span class="k">Total modele</span><span class="v">2.63</span></div>
-    <div><span class="k">P(+2,5)</span><span class="v">48.8%</span></div>
-    <div><span class="k">Ligne book</span><span class="v">2.10 / 1.73 &nbsp;&middot;&nbsp; book 44.9%</span></div>
-    <div><span class="k">Ecart</span><span class="v"><span class='ecart'>+3.9% over</span></span></div>
-    <div><span class="k">1 / N / 2</span><span class="v">
-      48% / 26% / 26%</span></div>
-  </div>
-  <div class="colonnes">
-    <table>
-      <thead><tr><th>Moyenne sur 10 matchs</th><th>Celta</th>
-        <th>Ath Bilbao</th></tr></thead>
-      <tbody>
-        <tr><td>Buts marques</td><td class='num'>1.00 (10)</td><td class='num'>1.20 (10)</td></tr><tr><td>Buts encaisses</td><td class='num'>1.30 (10)</td><td class='num'>2.00 (10)</td></tr><tr><td>Tirs</td><td class='num'>7.00 (10)</td><td class='num'>12.90 (10)</td></tr><tr><td>Tirs cadres</td><td class='num'>3.30 (10)</td><td class='num'>4.30 (10)</td></tr><tr><td>Tirs cadres concedes</td><td class='num'>4.40 (10)</td><td class='num'>4.90 (10)</td></tr><tr><td>Corners</td><td class='num'>3.10 (10)</td><td class='num'>7.40 (10)</td></tr><tr class='sep'><td colspan='3'></td></tr><tr><td>Matchs a +2,5 buts</td><td class='num'>50% (10)</td><td class='num'>50% (10)</td></tr><tr><td>Les deux marquent</td><td class='num'>50% (10)</td><td class='num'>60% (10)</td></tr><tr><td>Total du match</td><td class='num'>2.30 (10)</td><td class='num'>3.20 (10)</td></tr><tr><td>Buts par tir cadre</td><td class='num'>0.30 (10)</td><td class='num'>0.28 (10)</td></tr>
-        <tr><td>Forme (5 derniers)</td><td class='num'>DNVND</td>
-          <td class='num'>DNDDD</td></tr>
-      </tbody>
-    </table>
-    <div class="h2h"><div class='recents'><h4>Celta &mdash; 6 derniers</h4><ul><li>27/08 dom. Osasuna 1-2 [3]</li><li>22/08 ext. Valencia 0-0 [0]</li><li>23/05 dom. Sevilla 1-0 [1]</li><li>17/05 ext. Ath Bilbao 1-1 [2]</li><li>12/05 dom. Levante 2-3 [5]</li><li>09/05 ext. Ath Madrid 1-0 [1]</li></ul><p class='note'>Buts par match : <b>2.00 (6)</b></p></div><div class='recents'><h4>Ath Bilbao &mdash; 6 derniers</h4><ul><li>27/08 ext. Barcelona 0-2 [2]</li><li>22/08 dom. Sevilla 1-3 [4]</li><li>23/05 ext. Real Madrid 2-4 [6]</li><li>17/05 dom. Celta 1-1 [2]</li><li>13/05 ext. Espanol 0-2 [2]</li><li>10/05 dom. Valencia 0-1 [1]</li></ul><p class='note'>Buts par match : <b>2.83 (6)</b></p></div></div>
+    <div class="h2h"><div class='recents'><h4>Darmstadt &mdash; 6 derniers</h4><ul><li>16/08 ext. Dresden 0-1 [1]</li><li>08/08 dom. Holstein Kiel 2-2 [4]</li><li>17/05 dom. Paderborn 0-2 [2]</li><li>10/05 ext. PreuÃen MÃ¼nster 1-1 [2]</li><li>03/05 ext. Karlsruhe 1-2 [3]</li><li>25/04 dom. Elversberg 3-3 [6]</li></ul><p class='note'>Buts par match : <b>3.00 (6)</b></p></div><div class='recents'><h4>Hannover &mdash; 6 derniers</h4><ul><li>16/08 dom. Wolfsburg 0-1 [1]</li><li>09/08 ext. Cottbus 1-3 [4]</li><li>17/05 dom. Nurnberg 3-3 [6]</li><li>09/05 ext. Bochum 1-1 [2]</li><li>03/05 dom. PreuÃen MÃ¼nster 3-3 [6]</li><li>25/04 ext. Karlsruhe 3-1 [4]</li></ul><p class='note'>Buts par match : <b>3.83 (6)</b></p></div></div>
   </div>
 </article>
 </body></html>
